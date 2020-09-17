@@ -1,4 +1,4 @@
-package Strings;
+package String.palindrome;
 
 public class PalindromeInteger1 {
     public static boolean palindrome(int number) {          //13456

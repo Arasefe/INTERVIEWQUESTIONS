@@ -1,4 +1,4 @@
-package Strings;
+package String.palindrome;
 
 public class PalindromeInteger3 {
     public static boolean isPalindrome(int num){            //1021

@@ -1,11 +1,11 @@
 package Arrays;
 
 public class ArrayLargestNumber1 {
-    public static void arrayLargestMethod(int[]nums){
+    public static int arrayLargestMethod(int[]nums){
         /*
-        Create a method it will take one parameter as a int array and
-        the method will return largest value from array.
-        (Use largest value without using sort method
+        Create a method it will take one parameter as an int array and
+        the method will return largest value from the array.
+        (Use largest value without using sort method)
          */
         int largest=nums[0];
         int i=0;
@@ -15,6 +15,7 @@ public class ArrayLargestNumber1 {
           }
         }
         System.out.println(largest);
+        return largest;
     }
 
     public static void main(String[] args) {

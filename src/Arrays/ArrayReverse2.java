@@ -3,6 +3,11 @@ package Arrays;
 import java.util.Arrays;
 
 public class ArrayReverse2 {
+    /*
+        Create a method it will take one parameter as an int array and
+        the method will return the reversed array.
+        (do it without using reverse method)
+     */
     public static void reverseMethod(int []limit){
       int []reverse=new int[limit.length];
       int i=0;
@@ -11,7 +16,7 @@ public class ArrayReverse2 {
           reverse[i]=limit[j];
           System.out.println(reverse[i]);
       }
-        System.out.println(Arrays.toString(reverse));
+        System.out.println(Arrays.toString(reverse));       // print the reversed array as a String
 
     }
 

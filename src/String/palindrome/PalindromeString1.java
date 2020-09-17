@@ -1,4 +1,4 @@
-package Strings;
+package String.palindrome;
 
 public class PalindromeString1 {
 
