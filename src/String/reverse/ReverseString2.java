@@ -2,23 +2,25 @@ package String.reverse;
 
 public class ReverseString2 {
     public static void main(String[] args) {
-        reverseStringBuffer("Aras");
-        StringBuffer sb=reverse("Tulpar");
+        reverse1("Aras");
+        StringBuffer sb=reverse2("Tulpar");
         System.out.println(sb.toString());
 
         reverseStringBuilder("Banu");
+
+        reverse3("Ismail");
 
 
 
 
     }
-    public static void reverseStringBuffer(String str){
+    public static void reverse1(String str){
         StringBuffer stringBuffer=new StringBuffer(str);
         System.out.println(stringBuffer.reverse());
 
     }
 
-    public static StringBuffer reverse(String str){
+    public static StringBuffer reverse2(String str){
         return new StringBuffer(str).reverse();
     }
 
@@ -26,6 +28,12 @@ public class ReverseString2 {
         StringBuilder stringBuilder=new StringBuilder(str);
         System.out.println(stringBuilder.reverse());
 
+    }
+
+    public static void reverse3(String str){
+        StringBuilder sb=new StringBuilder(str);
+        sb.reverse();
+        System.out.println(sb);
     }
 
 }
