@@ -1,4 +1,4 @@
-package Arrays;
+package ArraysPackage;
 
 public class ArraySmallestNumber2 {
     public void smallestArrayMethod(int []num){

@@ -1,4 +1,4 @@
-package Arrays;
+package ArraysPackage;
 
 public class ArraySumMethod {
     public static void main(String[] args) {

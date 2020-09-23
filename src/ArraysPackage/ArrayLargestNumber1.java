@@ -1,4 +1,4 @@
-package Arrays;
+package ArraysPackage;
 
 public class ArrayLargestNumber1 {
     public static int arrayLargestMethod(int[]nums){

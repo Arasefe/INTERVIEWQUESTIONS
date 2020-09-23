@@ -1,4 +1,4 @@
-package Arrays;
+package ArraysPackage;
 
 public class ArrayDuplicate {
     public static void main(String[] args) {

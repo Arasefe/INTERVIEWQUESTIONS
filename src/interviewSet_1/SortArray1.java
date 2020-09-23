@@ -2,7 +2,7 @@ package interviewSet_1;
 
 import java.util.Arrays;
 
-public class SortArray {
+public class SortArray1 {
     //4.Write a method where u sort an Array int[] without using the sort method
 
     public static void main(String[] args) {
@@ -24,10 +24,11 @@ public class SortArray {
     }
     public static void sortArray2(int []array){
         // sortArray2(new int[]{21,7,4,3,2,8,1});
-        int temp=0;
+
         for(int num:array){
+            int temp=0;
             for(int each:array){
-                if(each<num){
+                if(each>num){
                     temp=num;
                     num=each;
                     each=temp;

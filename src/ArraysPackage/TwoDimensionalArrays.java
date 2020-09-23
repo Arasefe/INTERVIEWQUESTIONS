@@ -1,4 +1,4 @@
-package Arrays;
+package ArraysPackage;
 
 public class TwoDimensionalArrays {
     public static void twoDimensionalArray() {

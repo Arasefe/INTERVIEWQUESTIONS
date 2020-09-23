@@ -19,4 +19,14 @@ public class Remainder {
         return remainder;
     }
 
+    public static int remainder2(int dividend, int divisor){
+        int remainder=0;
+
+        if(dividend<divisor){
+            return divisor;
+        }else{
+            return dividend-divisor*(dividend/divisor);
+        }
+    }
+
 }

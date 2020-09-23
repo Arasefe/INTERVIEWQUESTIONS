@@ -1,4 +1,4 @@
-package Arrays;
+package ArraysPackage;
 import java.util.Arrays;
 public class ArraySorting3 {
     public static void arraySorting(int...num){

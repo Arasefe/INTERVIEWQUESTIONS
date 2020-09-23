@@ -1,7 +1,7 @@
-package Arrays;
+package ArraysPackage;
 
-public class ArrayLargestNumber2 {
-    public void largestArrayMethod(int...num){
+public class ArrayLargestNumber3 {
+    public static void arrayLargestMethod(int []num){
         int largest=num[0];
         int i=0;
         for(i=1;i<num.length;i++){
@@ -10,10 +10,11 @@ public class ArrayLargestNumber2 {
             }
         }
         System.out.println(largest);
+
     }
 
     public static void main(String[] args) {
-        ArrayLargestNumber2 arr=new ArrayLargestNumber2();
-        arr.largestArrayMethod(15,16,56,4,78,2,123,678,4,9);
+        int []num=new int[]{2,3,4,5,8,43,32,54};
+        arrayLargestMethod(num);
     }
 }
