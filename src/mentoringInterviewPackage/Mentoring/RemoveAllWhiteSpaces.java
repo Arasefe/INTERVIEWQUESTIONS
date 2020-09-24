@@ -1,4 +1,4 @@
-package String;
+package mentoringInterviewPackage.Mentoring;
 
 public class RemoveAllWhiteSpaces {
     public static void main(String[] args) {

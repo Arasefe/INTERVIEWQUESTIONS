@@ -1,4 +1,4 @@
-package interviewSet_1;
+package mentoringInterviewPackage.interviewSet_1;
 
 public class FrequencyOfLetters {
     //5.Write a method which returns how many times each letter is repeated?

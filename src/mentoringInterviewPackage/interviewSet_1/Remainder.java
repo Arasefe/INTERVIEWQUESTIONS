@@ -1,4 +1,4 @@
-package interviewSet_1;
+package mentoringInterviewPackage.interviewSet_1;
 
 public class Remainder {
     //10.Can you write a method which finds remainder of 2 numbers without using the % operator?

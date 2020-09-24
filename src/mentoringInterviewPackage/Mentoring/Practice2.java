@@ -1,4 +1,4 @@
-package Mentoring;
+package mentoringInterviewPackage.Mentoring;
 
 public class Practice2 {
     public static void main(String[] args) {

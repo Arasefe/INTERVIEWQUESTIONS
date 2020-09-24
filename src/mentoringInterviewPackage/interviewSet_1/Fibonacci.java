@@ -1,4 +1,4 @@
-package interviewSet_1;
+package mentoringInterviewPackage.interviewSet_1;
 
 public class Fibonacci {
     /*

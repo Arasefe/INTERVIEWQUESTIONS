@@ -1,4 +1,4 @@
-package interviewSet_1;
+package mentoringInterviewPackage.interviewSet_1;
 
 public class Palindrome {
     //6.A palindrome is a word, number, phrase, or other sequence

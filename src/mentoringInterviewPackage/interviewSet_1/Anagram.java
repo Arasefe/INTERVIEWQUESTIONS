@@ -1,4 +1,4 @@
-package interviewSet_1;
+package mentoringInterviewPackage.interviewSet_1;
 import java.util.Arrays;
 public class Anagram {
     //2.Write a method where u check to see if the word u pass is Anagram

@@ -1,4 +1,4 @@
-package String;
+package mentoringInterviewPackage.Mentoring;
 
 public class Test1 {
     public int sumDigits(String str) {
