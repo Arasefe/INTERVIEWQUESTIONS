@@ -2,7 +2,7 @@ package recursion;
 
 public class Factorial1 {
     public static void main(String[] args) {
-        System.out.println(iterativeFactorial(3));
+        System.out.println(iterativeFactorial(6));
 
     }
 

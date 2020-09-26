@@ -9,7 +9,7 @@ public class Factorial2 {
     // n! = n *(n - 1)!
 
     public static void main(String[] args) {
-        System.out.println(recursiveFactorial(6));
+        System.out.println(recursiveFactorial(5));
     }
 
     public static int recursiveFactorial(int num){

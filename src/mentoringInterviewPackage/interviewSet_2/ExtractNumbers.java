@@ -13,7 +13,7 @@ public class ExtractNumbers {
 
         String numeric="";
         for (int i = 0; i < str.length(); i++) {
-            if(str.charAt(i)>=48 & str.charAt(i)<=57){
+            if(str.charAt(i)>=48 | str.charAt(i)<=57){
                 numeric+=str.charAt(i);
             }
         }

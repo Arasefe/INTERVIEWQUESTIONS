@@ -10,6 +10,7 @@ public class ReverseSentence {
 
         reverseSentence("The more you study the better you will be");
         reverseString("Aras Efe");
+        reverseSentence1("The more you study the better you will be");
     }
 
     public static void reverseSentence(String sentence){
@@ -35,5 +36,17 @@ public class ReverseSentence {
         }
         System.out.println(reversed);
 
+    }
+
+    public static void reverseSentence1(String sentence){
+        String [] strArray=sentence.split(" ");
+        String [] strReverseArray=new String[strArray.length];
+        int j= strArray.length-1;
+        for(String each:strArray){
+            strReverseArray[j]=each;
+            j--;
+        }
+        System.out.println("_____________________________");
+        System.out.println(Arrays.toString(strReverseArray));
     }
 }
