@@ -22,4 +22,22 @@ public class Factorial {
         }
         return number*factorial2(number-1);
     }
+
+    public static int factorial3(int num){
+        int factorial=1;
+        for(int i=num;i>=1;i--){
+            factorial*=i;                                          // 6 30 120 360 720
+
+        }
+        return factorial;
+    }
+
+
+    public static  int factorial4(int num){
+        if(num==1){
+            return num;
+        }
+        return num*factorial4(num-1);
+
+    }
 }

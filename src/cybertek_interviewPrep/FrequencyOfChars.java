@@ -15,10 +15,10 @@ public class FrequencyOfChars {
             if (!nonDup.contains(str.charAt(i) + "")) nonDup += str.charAt(i);
         }
 
-        ArrayList<String> list = new ArrayList<>(Arrays.asList(str.split("")));
+        ArrayList<String> letters = new ArrayList<>(Arrays.asList(str.split("")));
         String result = "";
         for (int i = 0; i < nonDup.length(); i++) {
-            int count = Collections.frequency(list, list.get(i));
+            int count = Collections.frequency(letters,letters.get(i));
             result += nonDup.charAt(i) + "" + count;
         }
         System.out.println(result);
