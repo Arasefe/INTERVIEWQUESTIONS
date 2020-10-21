@@ -7,7 +7,7 @@ public class ReverseString_Sentence {
         //reverse1("The more you study the better you will be!");
         //reverse2("The more you study the better you will be!");
         System.out.println(reverse3("Islam"));
-        reverse4("Katerina");
+        reverse4("Tulpar");
     }
     public static void reverse1(String str){
         String reverse="";

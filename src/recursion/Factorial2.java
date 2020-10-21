@@ -9,14 +9,23 @@ public class Factorial2 {
     // n! = n *(n - 1)!
 
     public static void main(String[] args) {
-        System.out.println(recursiveFactorial(5));
+        System.out.println(recursiveFactorial1(5));
+        System.out.println(recursiveFactorial2(5));
     }
 
-    public static int recursiveFactorial(int num){
+    public static int recursiveFactorial1(int num){
 
-        if(num==0){
-            return 1;
+        if(num==1){             //num==0
+            return num;           //return 1;
         }
-        return num*recursiveFactorial(num-1);
+        return num*recursiveFactorial1(num-1);
+    }
+
+
+    public static int recursiveFactorial2(int num){
+        if(num==1){
+            return num;
+        }
+        return num*recursiveFactorial2(num-1);
     }
 }
