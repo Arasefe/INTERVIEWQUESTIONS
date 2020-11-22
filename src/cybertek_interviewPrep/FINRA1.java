@@ -1,10 +1,9 @@
 package cybertek_interviewPrep;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-public class FINRA {
+public class FINRA1 {
     /*
     Write a method which prints out the numbers from 1 to 30
     but for numbers which are a multiple of 3, print "FIN" instead of the number
