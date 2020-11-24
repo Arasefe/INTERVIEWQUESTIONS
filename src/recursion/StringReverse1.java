@@ -13,4 +13,14 @@ public class StringReverse1 {
 
         return reverse((str).substring(1)) + str.charAt(0);
     }
+
+
+    public static String reverse2(String str){
+        if(str.isEmpty()){
+            return str;
+        }
+       return reverse2(str.substring(1)+str.charAt(0));
+    }
+
+
 }
