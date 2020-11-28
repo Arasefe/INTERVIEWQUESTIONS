@@ -7,7 +7,7 @@ Write a return method that check if a string is build out of the same letters as
 Ex:  same("abc",  "cab"); -> true
 same("abc",  "abb"); -> false:
  */
-public class SameLetters {
+public class _3SameLetters {
     public static void main(String[] args) {
 
         boolean result = sameLetters1("Aras", "Sara");

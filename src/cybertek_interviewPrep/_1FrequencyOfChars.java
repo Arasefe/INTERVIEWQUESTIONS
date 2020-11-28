@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class FrequencyOfChars {
+public class _1FrequencyOfChars {
     public static void main(String[] args) {
         frequencyOfChars("AADDJSDDSFSFFMS");
     }

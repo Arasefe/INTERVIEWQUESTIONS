@@ -4,10 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class FindTheUnique {
+public class _5FindTheUnique {
     public static void main(String[] args) {
         findTheUnique1("AAABBBCCCDEF");
         String str=findTheUnique2("JDASDAKSDAHAD");
+        findTheUnique1("dkdanaksdaksd");
+
+
+
         System.out.println(str);
 
     }

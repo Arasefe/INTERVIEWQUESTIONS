@@ -1,6 +1,6 @@
 package cybertek_interviewPrep;
 
-public class RemoveDuplicates {
+public class _4RemoveDuplicates {
 
     public static void main(String[] args) {
 

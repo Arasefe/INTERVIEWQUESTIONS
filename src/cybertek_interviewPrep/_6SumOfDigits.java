@@ -1,12 +1,10 @@
 package cybertek_interviewPrep;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
-public class SumOfDigits {
+public class _6SumOfDigits {
     public static void main(String[] args) {
-        sumOfDigitsInString("dhsd239dsk4nknq6");
-        sumOfDigitsInString1("2ssdk8knsdnk3");
+        //sumOfDigitsInString("dhsd239dsk4nknq6");
+        //sumOfDigitsInString1("2ssdk8knsdnk3");
+        System.out.println(sumOfDigitsInString2("2ssdk8knsdnk34nksdnmfw843"));
 
     }
     public static void sumOfDigitsInString(String str){
@@ -36,4 +34,16 @@ public class SumOfDigits {
         }
         System.out.println("sum = " + Sum);
     }
+
+    public static int sumOfDigitsInString2(String str){
+        char []ch=str.toCharArray();
+        int sum=0;
+        for (int i = 0; i < ch.length; i++) {
+            if(Character.isDigit(ch[i])){
+                sum+=Integer.parseInt(ch[i]+"");
+            }
+        }
+        return sum;
+    }
+
 }
