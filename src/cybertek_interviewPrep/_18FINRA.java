@@ -18,19 +18,19 @@ public class _18FINRA {
     }
 
     public static void FINRA1() {
-        String FINRA = "";
+        String result = "";
         for (int i = 1; i <= 30; i++) {
             if (i % 3 == 0 && i % 5 == 0) {
-                FINRA += "FINRA";
+                result += "FINRA";
             } else if (i % 5 == 0) {
-                FINRA += "RA";
+                result += "RA";
             } else if (i % 3 == 0) {
-                FINRA += "FIN";
+                result += "FIN";
             } else {
-                FINRA += i;
+                result += i;
             }
         }
-        System.out.println(FINRA);
+        System.out.println(result);
     }
 
     public static void FINRA2() {
