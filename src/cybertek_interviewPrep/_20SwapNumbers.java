@@ -1,6 +1,6 @@
 package cybertek_interviewPrep;
 
-public class SwapNumbers {
+public class _20SwapNumbers {
     public static void main(String[] args) {
         swapNumbers1(3,5);
         swapNumbers2(4,6);

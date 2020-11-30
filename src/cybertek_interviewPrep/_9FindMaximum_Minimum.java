@@ -1,8 +1,6 @@
 package cybertek_interviewPrep;
 
-import java.util.Arrays;
-
-public class FindMaximum_Minimum {
+public class _9FindMaximum_Minimum {
     public static void main(String[] args) {
         minMax(new int[]{1,2,32,12,34,5,-12,-345});
     }

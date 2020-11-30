@@ -3,7 +3,7 @@ package cybertek_interviewPrep;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FINRA1 {
+public class _18FINRA {
     /*
     Write a method which prints out the numbers from 1 to 30
     but for numbers which are a multiple of 3, print "FIN" instead of the number
@@ -12,12 +12,12 @@ public class FINRA1 {
      */
 
     public static void main(String[] args) {
-        //methodFINRA1();
-        //methodFINRA2();
-        methodFINRA3();
+        FINRA1();
+        FINRA2();
+        FINRA3();
     }
 
-    public static void methodFINRA1() {
+    public static void FINRA1() {
         String FINRA = "";
         for (int i = 1; i <= 30; i++) {
             if (i % 3 == 0 && i % 5 == 0) {
@@ -33,7 +33,7 @@ public class FINRA1 {
         System.out.println(FINRA);
     }
 
-    public static void methodFINRA2() {
+    public static void FINRA2() {
         String s = "";
         for (int i = 1; i <= 30; i++) {
             if (i % 3 == 0 && i % 5 == 0) {
@@ -49,7 +49,7 @@ public class FINRA1 {
         System.out.println(s);
     }
 
-    public static void methodFINRA3() {
+    public static void FINRA3() {
         List list = new ArrayList<>();
         for (int i = 1; i <= 30; i++) {
             if (i % 3 == 0 && i % 5 == 0) {
@@ -63,5 +63,27 @@ public class FINRA1 {
             }
         }
         System.out.println(list);
+    }
+
+    public static void FINRA4(int boundary) {
+        for (int i = 1; i <= boundary; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.print("FINRA ");
+            } else if (i % 3 == 0) {
+                System.out.print("FIN ");
+            } else if (i % 5 == 0) {
+                System.out.print("RA ");
+            } else {
+                System.out.print(i +" ");
+            }
+        }
+        System.out.println();
+    }
+
+    public static void FINRA5(int boundary){
+
+        for (int i = 1; i <=boundary; i++) {
+            System.out.print((i%3==0&&i%5==0)?"FINRA ":(i%3==0)?"FIN ":(i%5==0)?"RA ": String.valueOf(i)+" ");
+        }
     }
 }
