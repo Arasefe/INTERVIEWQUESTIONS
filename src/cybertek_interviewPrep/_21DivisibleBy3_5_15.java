@@ -1,6 +1,6 @@
 package cybertek_interviewPrep;
 
-public class DivisibleBy3_5_15 {
+public class _21DivisibleBy3_5_15 {
     /*
     Write a program that can print the numbers between 1 ~ 100 that can be divisible by 3, 5, and 15.
 
@@ -35,6 +35,9 @@ public class DivisibleBy3_5_15 {
         System.out.println(result1);
         System.out.println(result2);
         System.out.println(result3);
+
+    }
+    public static void divisible_by_3_5_15(int i){
 
     }
 }

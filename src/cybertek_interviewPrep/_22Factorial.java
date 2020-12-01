@@ -1,6 +1,6 @@
 package cybertek_interviewPrep;
 
-public class Factorial {
+public class _22Factorial {
     public static void main(String[] args) {
         System.out.println(factorial1(6));
         System.out.println(factorial2(6));
