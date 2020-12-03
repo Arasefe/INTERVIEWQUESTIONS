@@ -1,6 +1,6 @@
 package cybertek_interviewPrep;
 
-import java.util.LinkedHashMap;
+import java.util.Hashtable;
 import java.util.Map;
 
 public class _30FrequencyOfChars {
@@ -8,12 +8,15 @@ public class _30FrequencyOfChars {
     Write a method that prints the frequency of each character from a String
      */
     public static void main(String[] args) {
-        frequencyOfChars("Arasefemm");
+        frequencyOfChars("Annan");
 
     }
 
     public static void frequencyOfChars(String str) {
-        Map<Character, Integer> map = new LinkedHashMap<>();
+//        Map<Character, Integer> map = new LinkedHashMap<>();
+//        Map<Character, Integer> map1 = new HashMap<>();
+//        Map<Character, Integer> map2 = new TreeMap<>();
+        Map<Character, Integer> map = new Hashtable<>();
 
         for (Character each : str.toCharArray()) {
             if (map.containsKey(each)) {
