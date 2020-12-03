@@ -5,11 +5,11 @@ public class Palindrome {
 
     }
 
-    public static boolean palindrome(int number) {          //13456
+    public static boolean palindrome(int number) {              //13456
         String word = "" + number;                              // "13456"
-        String reversed = "";                                 //""
+        String reversed = "";                                   //""
         for (int i = word.length() - 1; i >= 0; i--) {
-            reversed += word.charAt(i);                     //"65431"
+            reversed += word.charAt(i);                         //"65431"
             if (word.equals(reversed)) {
                 return true;
             }
