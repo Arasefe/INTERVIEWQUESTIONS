@@ -6,13 +6,12 @@ import java.util.Collections;
 
 public class _5FindTheUnique {
     public static void main(String[] args) {
-        findTheUnique1("AAABBBCCCDEF");
-        String str=findTheUnique2("JDASDAKSDAHAD");
-        findTheUnique1("dkdanaksdaksd");
+        //findTheUnique1("AAABBBCCCDEF");
+        //String str=findTheUnique2("JDASDAKSDAHAD");
+        //findTheUnique1("dkdanaksdaksd");
+        findTheUnique4("asasaasce");
 
 
-
-        System.out.println(str);
 
     }
     public static void findTheUnique1(String str){
@@ -51,6 +50,23 @@ public class _5FindTheUnique {
             if(fr==1) unique+=str.charAt(i);
         }
 
+        System.out.println(unique);
+    }
+
+    public static void findTheUnique4(String str){
+        String unique="";
+        String[]arr=str.split("");
+        for (int i = 0; i < arr.length; i++) {
+            int count=0;
+            for (int j = 0; j < arr.length; j++) {
+                if(arr[j].equals(arr[i])){
+                    count++;
+                }
+            }
+            if(count==1){
+                unique+=arr[i];
+            }
+        }
         System.out.println(unique);
     }
 
