@@ -2,12 +2,14 @@ package cybertek_interviewPrep;
 
 public class _6SumOfDigits {
     public static void main(String[] args) {
-        //sumOfDigitsInString("dhsd239dsk4nknq6");
-        //sumOfDigitsInString1("2ssdk8knsdnk3");
-        System.out.println(sumOfDigitsInString2("2ssdk8knsdnk34nksdnmfw843"));
+        //sumOfDigitsInString1("dhsd239dsk4nknq6");
+        //sumOfDigitsInString2("2ssdk8knsdnk3");
+        //sumOfDigitsInString3("2ssdk8knsdnk3");
+        System.out.println(sumOfDigitsInString4("2ssdk8knsdnk3"));
+
 
     }
-    public static void sumOfDigitsInString(String str){
+    public static void sumOfDigitsInString1(String str){
         String [] array=str.split("");
         String numeric="";
         int num=0;
@@ -18,30 +20,39 @@ public class _6SumOfDigits {
             }
         }
 
-        System.out.println("Numeric String is  " + numeric);
+        System.out.println("Numeric String is  " + numeric);        //"2834843"
         System.out.println("Sum = " + num);
     }
 
-    public static void sumOfDigitsInString1(String str){
+    public static void sumOfDigitsInString2(String str){
         char[]ch=str.toCharArray();
 
-        int Sum=0;
+        int sum=0;
         for (int i = 0; i < ch.length; i++) {
             if(Character.isDigit(ch[i])){
 
-                Sum+=Integer.parseInt(ch[i]+"");
+                sum+=Integer.parseInt(ch[i]+"");
             }
         }
-        System.out.println("sum = " + Sum);
+        System.out.println("sum = " + sum);
     }
 
-    public static int sumOfDigitsInString2(String str){
+    public static int sumOfDigitsInString3(String str){
         char []ch=str.toCharArray();
         int sum=0;
         for (int i = 0; i < ch.length; i++) {
             if(Character.isDigit(ch[i])){
                 sum+=Integer.parseInt(ch[i]+"");
             }
+        }
+        return sum;
+    }
+
+    public static int sumOfDigitsInString4(String str){
+        int sum=0;
+        char []arr=str.toCharArray();
+        for (char each : arr) {
+            if(Character.isDigit(each)) sum+=Integer.parseInt(""+each);
         }
         return sum;
     }

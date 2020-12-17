@@ -1,5 +1,7 @@
 package cybertek_interviewPrep;
 
+import java.util.Arrays;
+
 public class _7SortAlphaNumeric {
     public static void main(String[] args) {
         /*
@@ -8,7 +10,7 @@ public class _7SortAlphaNumeric {
         append them back together
          */
 
-        sortAlphanumeric("DC501GCCCA098911");
+        sortAlphanumeric("DC|501|GCCCA|098911");
 
 
     }
@@ -19,14 +21,19 @@ public class _7SortAlphaNumeric {
         String alphabetic="";
         char[]ch=str.toCharArray();
         for (char each :ch ) {
-            if(Character.isAlphabetic(each)){
+            if(Character.isAlphabetic(each)){   // !Character.isDigit(each)
                 alphabetic+=each;
             }
             if(Character.isDigit(each)){
                 numeric+=each;
             }
         }
-
+        String[]numArr=numeric.split("");
+        String[]alphaArr=alphabetic.split("");
+        Arrays.sort(numArr);
+        Arrays.sort(alphaArr);
+        System.out.println(Arrays.toString(numArr));
+        System.out.println(Arrays.toString(alphaArr));
 
     }
 }
