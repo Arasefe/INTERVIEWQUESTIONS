@@ -7,9 +7,11 @@ public class _13SortAscending {
     public static void main(String[] args) {
         //sortAscending1();
         //sortAscending2();
-        //sortAscending3();
+        sortAscending3();
+        //sortAscending4();
 
-        sortDescending1();
+        //sortDescending1();
+        //sortDescending2();
     }
 
 
@@ -52,8 +54,8 @@ public class _13SortAscending {
         int[] arr = new int[]{6,3,5,2,7,4,45,8,11};
         for (int i = 0; i < arr.length; i++) {
             int temp=0;
-            for (int j = i+1; j < arr.length; j++) {
-                if(arr[i]>arr[j]){
+            for (int j = 0; j < arr.length; j++) {
+                if(arr[j]<arr[i]){
                     temp=arr[i];
                     arr[i]=arr[j];
                     arr[j]=temp;
@@ -63,11 +65,28 @@ public class _13SortAscending {
         System.out.println(Arrays.toString(arr));
     }
 
+
+    public static void sortAscending4(){
+        int[]intArr=new int[]{3,45,6,76,877,3234};
+
+        for (int i = 0; i < intArr.length; i++) {
+            int temp=0;
+            for (int j = i+1; j < intArr.length; j++) {
+                if(intArr[j]<intArr[i]){
+                    temp=intArr[i];
+                    intArr[i]=intArr[j];
+                    intArr[j]=temp;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(intArr));
+    }
+
     public static void sortDescending1(){
         int[] arr = new int[]{6,3,5,2,7,4,45,8,11};
         for (int i = 0; i < arr.length; i++) {
             int temp=0;
-            for (int j = i+1; j < arr.length; j++) {
+            for (int j = 0; j < arr.length; j++) {
                 if(arr[i]<arr[j]){
                     temp=arr[i];
                     arr[i]=arr[j];
@@ -78,4 +97,20 @@ public class _13SortAscending {
         }
         System.out.println(Arrays.toString(arr));
     }
+    public static void sortDescending2(){
+        int[] arr = new int[]{6,3,5,2,7,4,45,8,11};
+        for (int i = 0; i < arr.length; i++) {
+            int temp=0;
+            for (int j = 0; j < arr.length; j++) {
+                if(arr[j]<arr[i]){
+                    temp=arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=temp;
+                }
+            }
+
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+
 }
