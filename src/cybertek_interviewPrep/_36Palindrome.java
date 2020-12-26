@@ -1,6 +1,6 @@
 package cybertek_interviewPrep;
 
-public class Palindrome {
+public class _36Palindrome {
     public static void main(String[] args) {
 
     }
