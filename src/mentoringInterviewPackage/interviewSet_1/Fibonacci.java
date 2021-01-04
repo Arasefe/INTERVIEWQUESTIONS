@@ -9,13 +9,24 @@ public class Fibonacci {
      */
 
     public static void main(String[] args) {
-        fibonacciSeries(12);
+        fibonacciSeries(3);
     }
 
-    public static void fibonacciSeries(int number){
-
+    public static void fibonacciSeries(int number) {
+        // 0,1,1,2,3,5,8,13,21,34.....
+        int result = 0;
+        int a = 0;              //first number
+        int b = 1;              // second number
+        int c;                  //this is next number
+        if (number == 0) {
+            result = a;
+        }
+        for (int i = 2; i <= number; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+        }
+        result = b;
+        System.out.println(result);
     }
-
-
-
 }
