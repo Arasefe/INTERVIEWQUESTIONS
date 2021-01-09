@@ -6,9 +6,14 @@ import java.util.List;
 
 public class IteratorExample2 {
     public static void main(String[] args) {
+        methodIterateAndRemove1();
+        methodIterateAndRemove1();
+        methodIterateAndRemove1();
+    }
 
+    public static void methodIterateAndRemove1() {
         List<String> lst = new ArrayList<>();
-        lst.addAll(Arrays.asList("Aras","Tulpar","Efe","Ege","Banu","Ismail"));
+        lst.addAll(Arrays.asList("Aras", "Tulpar", "Efe", "Ege", "Banu", "Ismail"));
         /*
         for (int i = 0; i < lst.size(); i++) {          // [Tulpar, Ege, Ismail]
             lst.remove(lst.get(i));
@@ -31,5 +36,15 @@ public class IteratorExample2 {
 
         System.out.println(lst);
 
+    }
+
+    public static void methodIterateAndRemove2(){
+        List<String> lst = new ArrayList<>();
+        lst.addAll(Arrays.asList("Aras","Tulpar","Efe","Ege","Banu","Ismail"));
+
+        for (String name : lst) {                         // ConcurrentModificationException
+            lst.remove(name);
+        }
+        System.out.println(lst);
     }
 }
