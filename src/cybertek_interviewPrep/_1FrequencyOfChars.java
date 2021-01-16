@@ -6,13 +6,39 @@ import java.util.Collections;
 
 public class _1FrequencyOfChars {
     public static void main(String[] args) {
-        frequencyOfChars("AADDJSDDSFSFFMS");
+        frequencyOfCharsInString1("AADDJSDDSFSFFMS");
     }
 
-    public static void frequencyOfChars(String str) {
+    public static void frequencyOfCharsInString1(String str) {
+        String nonDup="";
+        for (int i = 0; i < str.length(); i++) {
+            if(!nonDup.contains(""+str.charAt(i))){
+                nonDup+=""+str.charAt(i);
+            }
+        }
+        String result="";
+
+        for (int i = 0; i < nonDup.length(); i++) {
+            int count=0;
+            for (int j = 0; j < str.length(); j++) {
+                if(nonDup.charAt(i)==str.charAt(j)){
+                    count++;
+                }
+            }
+            result+=""+nonDup.charAt(i)+count;
+        }
+        System.out.println(result);
+
+    }
+
+
+
+    public static void frequencyOfCharsInString2(String str) {
         String nonDup = "";
         for (int i = 0; i < str.length(); i++) {
-            if (!nonDup.contains(str.charAt(i) + "")) nonDup += str.charAt(i);
+            if (!nonDup.contains(str.charAt(i) + "")) {
+                nonDup += str.charAt(i);
+            }
         }
 
         ArrayList<String> letters = new ArrayList<>(Arrays.asList(str.split("")));
@@ -24,7 +50,7 @@ public class _1FrequencyOfChars {
         System.out.println(result);
     }
 
-    public static void frequencyOfChars1(String str) {
+    public static void frequencyOfCharsInString3(String str) {
         String unrepeated = "";
         String word = "";
         int count = 0;
@@ -46,7 +72,7 @@ public class _1FrequencyOfChars {
         System.out.println(word);
     }
 
-    public static void frequencyOfChars2(String str) {    //arasaa
+    public static void frequencyOfCharsInString4(String str) {    //arasaa
         String word = "";
         String nonDup = "";
 
@@ -64,7 +90,7 @@ public class _1FrequencyOfChars {
         System.out.println(word);
     }
 
-    public static void frequencyOfChars3(String str) {
+    public static void frequencyOfCharsInString5(String str) {
 
         for (int i = 0; i < str.length(); i++) {
             int count = Collections.frequency(Arrays.asList(str.split("")), str.charAt(i) + "");
@@ -74,7 +100,7 @@ public class _1FrequencyOfChars {
     }
 
 
-    public static void frequencyOfChars4(String str) {
+    public static void frequencyOfCharsInString6(String str) {
 
         String nonDup = "";
         String result = "";
@@ -99,14 +125,12 @@ public class _1FrequencyOfChars {
             }
 
             result += "" + ch + count;
-
         }
-
         System.out.println(result);
     }
 
 
-    public static void frequencyOfChars5(String str) {
+    public static void frequencyOfCharsInString7(String str) {
         String nonDup = "";
         String result = "";
         for (int i = 0; i < str.length(); i++) {
@@ -127,7 +151,7 @@ public class _1FrequencyOfChars {
         System.out.println(result);
     }
 
-    public static String frequencyOfChars6(String str) {
+    public static String frequencyOfCharsInString8(String str) {
         String nonDup = "";
         for (int i = 0; i < str.length(); i++) {
             if (!nonDup.contains(str.charAt(i) + "")) nonDup += str.charAt(i);
@@ -144,6 +168,4 @@ public class _1FrequencyOfChars {
         //System.out.println(result);
         return result;
     }
-
-
 }
