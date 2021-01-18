@@ -1,6 +1,12 @@
 package PrimitiveDataTypes;
 
 public class SwapTwoVariables {
+
+
+    public static void main(String[] args) {
+        swapMethod(4,5);
+    }
+
     public static void swapMethod(int a,int b){
 //        int a=4;
 //        int b=3;
@@ -11,7 +17,12 @@ public class SwapTwoVariables {
         System.out.println("b is " +b);
     }
 
-    public static void main(String[] args) {
-        swapMethod(4,5);
+    public static void swapMethod2(int a, int b){
+        int temp;
+        temp=a;
+        a=b;
+        b=temp;
+        System.out.println("a :"+a);
+        System.out.println("b :"+b);
     }
 }

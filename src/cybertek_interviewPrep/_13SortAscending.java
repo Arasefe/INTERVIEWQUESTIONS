@@ -71,7 +71,7 @@ public class _13SortAscending {
         for (int i = 0; i < intArr.length; i++) {
             int temp = 0;
             for (int j = i + 1; j < intArr.length; j++) {
-                if (intArr[j] < intArr[i]) {
+                if (intArr[j] > intArr[i]) {
                     temp = intArr[i];
                     intArr[i] = intArr[j];
                     intArr[j] = temp;
