@@ -1,6 +1,7 @@
 package myInterviewQuetions;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -8,11 +9,13 @@ public class PushZerosToEnd {
 
     public static void main(String[] args) {
         //pushZerosToEnd1(new int[]{2,4,0,3,0,6,7});
-        int[] numbers = pushZerosToEnd2(new int[]{0, 3, 1, 0, 5, 6, 7, 0});
+        //int[] numbers = pushZerosToEnd2(new int[]{0, 3, 1, 0, 5, 6, 7, 0});
         //System.out.println(Arrays.toString(numbers));
 
-        pushZerosToEnd3(new int[]{2, 4, 0, 3, 0, 6, 7});
+        //int[] arr = pushZerosToEnd2(new int[]{2, 4, 0, 3, 0, 6, 7});
+        //System.out.println(Arrays.toString(arr));
 
+        pushZerosToEnd4(new int[]{2, 4, 0, 3, 0, 6, 7});
     }
 
     public static void pushZerosToEnd1(int[] arr) {
@@ -54,5 +57,16 @@ public class PushZerosToEnd {
                 arr[i++] = each;
             }
         }
+    }
+
+    public static void pushZerosToEnd4(int arr[]) {
+        List<Integer> list = new LinkedList<Integer>();
+        for (int i = 0; i < arr.length; i++) {
+            list.add(arr[i]);
+        }
+
+        
+
+
     }
 }
