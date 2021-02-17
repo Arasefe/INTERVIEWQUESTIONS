@@ -3,14 +3,14 @@ package recursion;
 public class StringReverse3 {
     public static void main(String[] args) {
         System.out.println(reverseString1("Toomanycooksspoilthebroth"));
-        reverseString2("Toomanycooksspoilthebroth");
+        //reverseString2("Toomanycooksspoilthebroth");
     }
 
     public static String reverseString1(String str){
         if(str.length()<1){
             return "";
         }
-        return reverseString1(str.substring(1))+str.charAt(0);
+        return reverseString1((str).substring(1))+str.charAt(0);
     }
 
 

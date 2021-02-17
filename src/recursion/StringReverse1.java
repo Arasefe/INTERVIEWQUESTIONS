@@ -3,15 +3,16 @@ package recursion;
 public class StringReverse1 {
 
     public static void main(String[] args) {
-        System.out.println(reverse("Aras Efe"));
+        System.out.println(reverse1("Aras Efe"));
+        //System.out.println(reverse2("Aras Efe"));
     }
 
-    public static String reverse(String str) {
+    public static String reverse1(String str) {
         if (str.isEmpty()){
             return str;
         }
 
-        return reverse((str).substring(1)) + str.charAt(0);
+        return reverse1((str).substring(1)) + str.charAt(0);
     }
 
 
@@ -19,7 +20,7 @@ public class StringReverse1 {
         if(str.isEmpty()){
             return str;
         }
-       return reverse2(str.substring(1)+str.charAt(0));
+       return reverse2((str).substring(1))+str.charAt(0);
     }
 
 
