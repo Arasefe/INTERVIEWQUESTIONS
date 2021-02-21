@@ -1,11 +1,11 @@
-package collectionsPackage;
+package collectionsPackage.MapInterface;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class Study1 {
+public class MapInterface {
     public static void main(String[] args) {
        // method();
         method2();
