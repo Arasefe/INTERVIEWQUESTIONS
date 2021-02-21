@@ -7,10 +7,10 @@ import java.util.concurrent.CopyOnWriteArraySet;
 public class SetInterface {
 
     public static void main(String[] args) {
-        listMethod1();
+        setMethod1();
     }
 
-    public static void listMethod1(){
+    public static void setMethod1(){
         Set<Integer>set=new HashSet<>();
         set.addAll(Arrays.asList(1,2,3,4,5));
         System.out.println("HashSet"+set);
@@ -19,7 +19,7 @@ public class SetInterface {
 
     }
 
-    public static void listMethod2(){
+    public static void setMethod2(){
         Set<Integer>set=new LinkedHashSet<>();
         set.addAll(Arrays.asList(1,2,3,4,5));
         System.out.println("LinkedHashSet"+set);
@@ -27,7 +27,7 @@ public class SetInterface {
         System.out.println("LinkedHashSet"+set);
     }
 
-    public static void listMethod3(){
+    public static void setMethod3(){
         Set<Integer> set=new TreeSet<>();
         set.addAll(Arrays.asList(1,2,3,4,5));
         System.out.println("Set"+set);
@@ -35,7 +35,7 @@ public class SetInterface {
         System.out.println("Set"+set);
     }
 
-    public static void listMethod4(){
+    public static void setMethod4(){
         Set<Integer>set=new ConcurrentSkipListSet<>();
         set.addAll(Arrays.asList(1,2,3,4,5));
         System.out.println("Stack"+set);
@@ -46,7 +46,7 @@ public class SetInterface {
         System.out.println("Stack after pop"+set);
     }
 
-    public static void listMethod5(){
+    public static void setMethod5(){
         Set<Integer>set=new CopyOnWriteArraySet<>();
         set.addAll(Arrays.asList(1,2,3,4,5));
         System.out.println("Set"+set);
