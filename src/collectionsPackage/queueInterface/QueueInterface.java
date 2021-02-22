@@ -46,7 +46,7 @@ public class QueueInterface {
         System.out.println("PriorityQueue"+queue);
         queue.poll();
         System.out.println(queue);
-        //Retrieves, but does not remove, the head of this queue
+        //Retrieves, but does not remove the head of this queue
         queue.peek();
         System.out.println(queue);
     }
