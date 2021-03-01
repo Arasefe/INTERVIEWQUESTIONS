@@ -1,4 +1,4 @@
-package ro;
+package rahul;
 
 public class _1SumOfArray {
     public static void main(String[] args) {
