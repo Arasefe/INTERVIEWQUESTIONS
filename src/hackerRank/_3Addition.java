@@ -1,6 +1,6 @@
 package hackerRank;
 
-public class _3 {
+public class _3Addition {
     int a;int b=9;
     public int sum(){
         return a+b;
@@ -9,12 +9,12 @@ public class _3 {
         return a+b;
     }
     int result(){
-        return new _3().add();
+        return new _3Addition().add();
     }
 }
-class Exampler{
+class Test {
     public static void main(String[] args) {
-        _3 e=new _3();
+        _3Addition e=new _3Addition();
         System.out.println(e.sum()+e.result());
     }
 }

@@ -8,7 +8,9 @@ public class StringFrequency {
         //method2("efemmm");
         //method3("efemmm");
         //method4("efelerrrr");
-        method5("efelerim");
+        //method5("efelerim");
+        //method6("efellerimmm");
+        method7("efellerimmm");
     }
 
     public static void method1(String str) {
@@ -85,6 +87,38 @@ public class StringFrequency {
                 map.put(unique,map.get(unique)+1);
             }
         }
+        System.out.println(map);
+    }
+
+    public static void method6(String str){
+        List<String>list=new LinkedList<>(Arrays.asList(str.split("")));
+
+        String uniques="";
+        for (int i = 0; i < list.size(); i++) {
+            if(!uniques.contains(list.get(i))){
+                uniques+=list.get(i);
+            }
+        }
+        //System.out.println(uniques);
+        String result="";
+        for (String each : uniques.split("")) {
+            int fr=Collections.frequency(list,each);
+            result+=each+" = "+fr+" ";
+        }
+        System.out.println(result);
+    }
+
+    public static void method7(String str){
+        Map<String,Integer>map=new LinkedHashMap<>();     // random order, accepts null
+        String[]array=str.split("");
+        for (String each : array) {
+            if(!map.containsKey(each)){
+                map.put(each,1);
+            }else if(map.containsKey(each)){
+                map.put(each,map.get(each)+1);
+            }
+        }
+
         System.out.println(map);
     }
 

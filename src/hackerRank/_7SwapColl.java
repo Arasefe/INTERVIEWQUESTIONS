@@ -12,6 +12,7 @@ public class _7SwapColl {
         list.add("and");
         list.add("Platform");
         list.add("independent");
+        list.add("language");
 
         Collections.swap(list,2,6);
         for(String str:list){

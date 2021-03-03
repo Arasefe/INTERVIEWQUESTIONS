@@ -1,6 +1,6 @@
 package myInterviewQuetions;
 
-public class DistanceBetweenCharOccurrence {
+public class DistanceBetweenChar {
 
     public static void main(String[] args) {
 
