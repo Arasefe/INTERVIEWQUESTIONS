@@ -1,18 +1,21 @@
 package ArraysPackage;
 
 public class ArraySmallestNumber1 {
+    public static void main(String[] args) {
+        smallestMethod(new int[]{5,7,9,11,56,78});
+    }
+
+
     public static void smallestMethod(int[]numbers){
         int smallest=numbers[0];
-        int i=0;
-        for(i=1;i<numbers.length-1;i++){
-            if(smallest>numbers[i]){
-                numbers[i]=smallest;
+
+        for(int i=1;i<numbers.length-1;i++){
+            if(numbers[i]<smallest){
+                smallest=numbers[i];
             }
         }
         System.out.println(smallest);
     }
 
-    public static void main(String[] args) {
-        smallestMethod(new int[]{5,7,9,11,56,78});
-    }
+
 }

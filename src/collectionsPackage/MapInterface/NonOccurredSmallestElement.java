@@ -1,6 +1,7 @@
 package collectionsPackage.MapInterface;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -58,7 +59,7 @@ public class NonOccurredSmallestElement {
     }
 
     public static void nonOccurredSmallestElement3(int []arr){
-        Set<Integer>uniques=new TreeSet<>();
+        Set<Integer>uniques=new LinkedHashSet<>();
         for (int each : arr) {
             if(each>0){
                 uniques.add(each);
