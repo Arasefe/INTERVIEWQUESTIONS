@@ -3,7 +3,7 @@ package collectionsPackage.MapInterface;
 import java.time.LocalDate;
 import java.util.*;
 
-public class ListOfMapExample2 {
+public class ListOfMap2 {
     public static void main(String[] args) {
         listOfMap();
     }

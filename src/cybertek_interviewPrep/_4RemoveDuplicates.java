@@ -1,5 +1,9 @@
 package cybertek_interviewPrep;
 
+import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 public class _4RemoveDuplicates {
 
     public static void main(String[] args) {
@@ -7,7 +11,10 @@ public class _4RemoveDuplicates {
         String result=removeDuplicates1("missing");
         System.out.println(result);
 
-        removeDuplicates2("missing");
+//        removeDuplicates2("missing");
+//        removeDuplicates3("missing");
+        removeDuplicates4("missing");
+
 
     }
     public static String removeDuplicates1(String str){
@@ -26,7 +33,7 @@ public class _4RemoveDuplicates {
         System.out.println(nonDup);
     }
 
-    public static void removeDuplicates(String str){
+    public static void removeDuplicates3(String str){
         String nonDup="";
         for(int i=0;i<str.length();i++){
             if(nonDup.contains(str.charAt(i)+"")){
@@ -37,5 +44,10 @@ public class _4RemoveDuplicates {
         }
         System.out.println(nonDup);
 
+    }
+
+    public static void removeDuplicates4(String str){
+        Set<String>uniques=new LinkedHashSet<>(Arrays.asList(str.split("")));
+        System.out.println(uniques);
     }
 }

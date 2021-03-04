@@ -32,4 +32,20 @@ public class CharFrequency {
         }
         System.out.println(result);
     }
+
+    public static void charFrequency3(String str){
+        List<String>list=new LinkedList<>(Arrays.asList(str.split("")));
+        Set<String>uniques=new HashSet<>();
+        for (String each : str.split("")) {
+            if(!uniques.contains(each)){
+                uniques.add(each);
+            }
+        }
+        String result="";
+        for (String unique : uniques) {
+            int fr=Collections.frequency(list,unique);
+            result+=unique+"="+fr+" ";
+        }
+        System.out.println(result);
+    }
 }

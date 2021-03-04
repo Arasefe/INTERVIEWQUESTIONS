@@ -2,14 +2,16 @@ package cybertek_interviewPrep;
 
 public class _6SumOfDigits {
     public static void main(String[] args) {
-        //sumOfDigitsInString1("dhsd239dsk4nknq6");
-        //sumOfDigitsInString2("2ssdk8knsdnk3");
-        //sumOfDigitsInString3("2ssdk8knsdnk3");
-        System.out.println(sumOfDigitsInString4("2ssdk8knsdnk3"));
-
+        //sumOfDigits1("dhsd239dsk4nknq6");
+        //sumOfDigits2("2ssdk8knsdnk3");
+        //sumOfDigits3("2ssdk8knsdnk3");
+        //sumOfDigits4("2ssdk8knsdnk3");
+        //sumOfDigits5("2ssdk8knsdnk3");
+        int sum=sumOfDigits5("2ssdk8knsdnk3");
+        System.out.println(sum);
 
     }
-    public static void sumOfDigitsInString1(String str){
+    public static void sumOfDigits1(String str){
         String [] array=str.split("");
         String numeric="";
         int num=0;
@@ -24,7 +26,7 @@ public class _6SumOfDigits {
         System.out.println("Sum = " + num);
     }
 
-    public static void sumOfDigitsInString2(String str){
+    public static void sumOfDigits2(String str){
         char[]ch=str.toCharArray();
 
         int sum=0;
@@ -37,7 +39,7 @@ public class _6SumOfDigits {
         System.out.println("sum = " + sum);
     }
 
-    public static int sumOfDigitsInString3(String str){
+    public static int sumOfDigits3(String str){
         char []ch=str.toCharArray();
         int sum=0;
         for (int i = 0; i < ch.length; i++) {
@@ -48,11 +50,21 @@ public class _6SumOfDigits {
         return sum;
     }
 
-    public static int sumOfDigitsInString4(String str){
+    public static int sumOfDigits4(String str){
         int sum=0;
         char []arr=str.toCharArray();
         for (char each : arr) {
             if(Character.isDigit(each)) sum+=Integer.parseInt(""+each);
+        }
+        return sum;
+    }
+
+    public static int sumOfDigits5(String str){
+        int sum=0;
+        for (int i = 0; i < str.length(); i++) {
+            if(Character.isDigit(str.charAt(i))){
+                sum+=str.charAt(i);
+            }
         }
         return sum;
     }

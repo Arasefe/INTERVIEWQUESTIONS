@@ -3,7 +3,7 @@ package collectionsPackage.MapInterface;
 
 import java.util.*;
 
-public class ListOfMapExample {
+public class ListOfMap1 {
     public static void main(String[] args) {
         listOfMap();
     }

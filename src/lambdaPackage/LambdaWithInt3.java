@@ -8,8 +8,8 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class LambdaWithInt {
-    public LambdaWithInt() {
+public class LambdaWithInt3 {
+    public LambdaWithInt3() {
     }
 
     public static void main(String[] args) {
@@ -45,7 +45,7 @@ public class LambdaWithInt {
     public static void printEvenListElFunctional3(List<Integer> list) {
         list.stream().filter((t) -> {
             return t % 2 == 0;
-        }).forEach(LambdaWithInt::getPrint);
+        }).forEach(LambdaWithInt3::getPrint);
     }
 
     public static void getPrint(int a) {
@@ -63,7 +63,7 @@ public class LambdaWithInt {
     }
 
     public static void getSquare2(List<Integer> list) {
-        list.stream().filter(LambdaWithInt::getOdds).map(LambdaWithInt::getSquare).forEach(LambdaWithInt::getPrint);
+        list.stream().filter(LambdaWithInt3::getOdds).map(LambdaWithInt3::getSquare).forEach(LambdaWithInt3::getPrint);
     }
 
     public static boolean getOdds(int a) {
@@ -75,21 +75,21 @@ public class LambdaWithInt {
     }
 
     public static int sumOfOdds1(List<Integer> list) {
-        return (Integer)list.stream().filter(LambdaWithInt::getOdds).map(LambdaWithInt::getSquare).reduce(0, (x, y) -> {
+        return (Integer)list.stream().filter(LambdaWithInt3::getOdds).map(LambdaWithInt3::getSquare).reduce(0, (x, y) -> {
             return x + y;
         });
     }
 
     public static Optional<Integer> sumOfOdds2(List<Integer> list) {
-        return list.stream().filter(LambdaWithInt::getOdds).map(LambdaWithInt::getSquare).reduce(Integer::sum);
+        return list.stream().filter(LambdaWithInt3::getOdds).map(LambdaWithInt3::getSquare).reduce(Integer::sum);
     }
 
     public static Optional<Integer> sumOfOdds3(List<Integer> list) {
-        return list.stream().filter(LambdaWithInt::getOdds).map(LambdaWithInt::getSquare).reduce(Math::addExact);
+        return list.stream().filter(LambdaWithInt3::getOdds).map(LambdaWithInt3::getSquare).reduce(Math::addExact);
     }
 
     public static Optional<Integer> sumOfOdds4(List<Integer> list) {
-        return list.stream().filter(LambdaWithInt::getOdds).map(LambdaWithInt::getSquare).reduce(LambdaWithInt::getSum);
+        return list.stream().filter(LambdaWithInt3::getOdds).map(LambdaWithInt3::getSquare).reduce(LambdaWithInt3::getSum);
     }
 
     public static int getSum(int a, int b) {
@@ -111,7 +111,7 @@ public class LambdaWithInt {
     }
 
     public static Optional<Integer> maxEl4(List<Integer> list) {
-        return list.stream().reduce(LambdaWithInt::getMax);
+        return list.stream().reduce(LambdaWithInt3::getMax);
     }
 
     public static int getMax(int x, int y) {
@@ -131,10 +131,10 @@ public class LambdaWithInt {
     }
 
     public static List<Integer> getOddSquaresSorted(List<Integer> list) {
-        return (List)list.stream().filter(LambdaWithInt::getOdds).distinct().map(LambdaWithInt::getSquare).sorted().collect(Collectors.toList());
+        return (List)list.stream().filter(LambdaWithInt3::getOdds).distinct().map(LambdaWithInt3::getSquare).sorted().collect(Collectors.toList());
     }
 
     public static List<Integer> getOddSquaresRevSorted(List<Integer> list) {
-        return (List)list.stream().filter(LambdaWithInt::getOdds).distinct().map(LambdaWithInt::getSquare).sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+        return (List)list.stream().filter(LambdaWithInt3::getOdds).distinct().map(LambdaWithInt3::getSquare).sorted(Comparator.reverseOrder()).collect(Collectors.toList());
     }
 }
