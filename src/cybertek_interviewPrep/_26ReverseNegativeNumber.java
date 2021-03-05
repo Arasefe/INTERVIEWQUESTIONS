@@ -6,8 +6,9 @@ public class _26ReverseNegativeNumber {
      */
 
     public static void main(String[] args) {
-        System.out.println(reverseNegativeNumber(-729));
-        System.out.println(reverseNegativeNumber2(-729));
+//        System.out.println(reverseNegativeNumber(-729));
+//        System.out.println(reverseNegativeNumber2(-729));
+        System.out.println(reverseNegativeNumber3(-729));
     }
     public static int reverseNegativeNumber(int num){
         String strNum="";
@@ -15,6 +16,9 @@ public class _26ReverseNegativeNumber {
             num=num*-1;
             strNum+=num;
         }
+
+
+
         String reverseNum="";
         for (int i = strNum.length()-1; i >=0 ; i--) {
             reverseNum+=strNum.charAt(i);
@@ -31,6 +35,22 @@ public class _26ReverseNegativeNumber {
         int result=Integer.parseInt(str);
         return result;
 
+    }
+
+
+    public static int reverseNegativeNumber3(int num){
+        int reverse=0;
+        if(num<0){
+            num=num*-1;
+        }
+
+        while(num!=0){
+            int digit=num%10;       // 9
+            reverse=reverse*10+digit;
+            num=num/10;
+
+        }
+        return reverse;
     }
 
 }

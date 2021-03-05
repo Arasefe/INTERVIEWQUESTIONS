@@ -6,7 +6,8 @@ import java.util.*;
 public class MapExample5 {
     public static void main(String[] args) {
         //method();
-        method2();
+        //method2();
+        method3();
     }
     public static void method(){
         Map<String, LocalDate> students=new TreeMap<>();
@@ -54,5 +55,17 @@ public class MapExample5 {
         for (Map.Entry<String, String> each : credentials.entrySet()) {
             System.out.println(each);
         }
+    }
+
+    public static void method3(){
+        Map<String,Integer>map=new HashMap<>();
+        
+        map.put("a",1);
+        map.put("a",1);
+        map.put("b",2);
+        map.put("c",3);
+        map.put("d",4);
+        map.put("e",5);
+        System.out.println(map);
     }
 }

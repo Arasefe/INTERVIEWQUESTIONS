@@ -1,1 +1,2 @@
-Too many cooks spoil the broth
+
+This is written using BufferedWriter
