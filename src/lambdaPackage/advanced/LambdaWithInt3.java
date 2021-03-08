@@ -1,4 +1,4 @@
-package lambdaPackage;
+package lambdaPackage.advanced;
 
 import java.io.PrintStream;
 import java.util.ArrayList;

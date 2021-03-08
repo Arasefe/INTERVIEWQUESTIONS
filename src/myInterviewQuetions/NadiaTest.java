@@ -3,6 +3,8 @@ package myInterviewQuetions;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class NadiaTest {
 
@@ -24,7 +26,8 @@ public class NadiaTest {
         //combiner1(titlesArray,categoriesArray);
         //combiner2(titlesArray,categoriesArray);
         //combiner3(titlesArray,categoriesArray);
-        combiner4(titlesArray,categoriesArray);
+        //combiner4(titlesArray,categoriesArray);
+        combineArrays(titlesArray,categoriesArray);
 
 
     }
@@ -66,7 +69,7 @@ public class NadiaTest {
         String result="";
         int i=0;
         for (String each : first) {
-            result+=each+","+second[i];
+            result+=each+","+second[i]+"\n";
             i++;
         }
 
@@ -76,5 +79,20 @@ public class NadiaTest {
         System.out.println(Arrays.toString(arr));
     }
 
+    //combine two arrays by one to one elements
+    public static void combineArrays(String[] arr1, String[] arr2){
+        //first format
+        IntStream
+                .range(0, Math.min(arr1.length, arr2.length))
+                .mapToObj(i -> arr1[i] + "," + arr2[i])
+                .collect(Collectors.toList()).forEach(System.out::print);
+        System.out.println();
+        //second format
+        List<String> output =  IntStream
+                .range(0, Math.min(arr1.length, arr2.length))
+                .mapToObj(i -> arr1[i] + ":" + arr2[i]+"\n")
+                .collect(Collectors.toList());
+        System.out.println(output);
+    }
 
 }

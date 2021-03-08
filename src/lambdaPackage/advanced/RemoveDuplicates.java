@@ -1,4 +1,4 @@
-package lambdaPackage;
+package lambdaPackage.advanced;
 
 import java.util.*;
 import java.util.stream.Collectors;

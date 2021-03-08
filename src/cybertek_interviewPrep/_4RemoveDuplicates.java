@@ -20,7 +20,9 @@ public class _4RemoveDuplicates {
     public static String removeDuplicates1(String str){
         String nonDup="";
         for(int i=0;i<str.length();i++){
-            if(!nonDup.contains(str.charAt(i)+"")) nonDup+=str.charAt(i);
+            if(!nonDup.contains(str.charAt(i)+"")){
+                nonDup+=str.charAt(i);
+            }
         }
         return nonDup;
     }
