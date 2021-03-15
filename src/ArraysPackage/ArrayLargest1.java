@@ -6,6 +6,8 @@ public class ArrayLargest1 {
 
         //arrayLargest1(new int[]{2,3,6,8,5});
         arrayLargest2(new int[]{2,3,6,8,5});
+        arrayLargest3(new int[]{2,3,6,8,5});
+        arrayLargest4(new int[]{2,3,6,8,5});
 
     }
 
@@ -47,4 +49,14 @@ public class ArrayLargest1 {
         System.out.println(largest);
     }
 
-}
+
+    public static void arrayLargest4(int ...num){
+            int largest=num[0];
+            for(int i=1;i<num.length;i++){
+                if(num[i]>largest){
+                    largest=num[i];
+                }
+            }
+            System.out.println(largest);
+        }
+    }

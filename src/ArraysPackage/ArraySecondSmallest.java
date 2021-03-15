@@ -1,14 +1,16 @@
 package ArraysPackage;
 
 
-public class ArraySecondMin1 {
+public class ArraySecondSmallest {
     public static void main(String[] args) {
-        //secondSmallest(new int[]{1,2,3,4,5,6});
+        //secondSmallest1(new int[]{1,2,3,4,5,6});
         //secondSmallest2(new int[]{1,2,3,4,5,6});
-        secondSmallest3(new int[]{1, 2, 3, 4, 5, 6});
+        //secondSmallest3(new int[]{1, 2, 3, 4, 5, 6});
+        secondSmallest4(new int[]{1, 2, 3, 4, 5, 6});
+        //secondSmallest5(new int[]{1, 2, 3, 4, 5, 6});
     }
 
-    public static void secondSmallest(int[] arr) {
+    public static void secondSmallest1(int[] arr) {
         int smallest = Integer.MAX_VALUE;
         int secondSmallest = Integer.MAX_VALUE;
         for (int i = 0; i < arr.length; i++) {
@@ -76,7 +78,22 @@ public class ArraySecondMin1 {
     }
 
 
+    public static void secondSmallest5(int[]numbers){
+        int smallest=Integer.MAX_VALUE;
+        int secondSmallest=Integer.MAX_VALUE;
 
+        for (int i = 0; i < numbers.length; i++) {
+            if(numbers[i]<smallest){
+                smallest=numbers[i];
+            }
+        }
+        for (int i = 0; i < numbers.length; i++) {
+            if(numbers[i]<secondSmallest && numbers[i]>smallest){
+                secondSmallest=numbers[i];
+            }
+        }
+        System.out.println(secondSmallest);
+    }
 
 
 

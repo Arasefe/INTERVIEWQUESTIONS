@@ -1,6 +1,10 @@
 package mathmethods;
 
 public class FibonacciNumbers {
+    public static void main(String[] args) {
+        methodFibonacci(345678);
+    }
+
     /*
     Create a method it will take one parameter as a int array and
     the method will return sorted array. (Do not use sort method.)
@@ -21,8 +25,4 @@ public class FibonacciNumbers {
             count++;
         }
     }
-    public static void main(String[] args) {
-        methodFibonacci(345678);
-    }
-
 }
