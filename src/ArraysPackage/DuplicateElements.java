@@ -2,7 +2,7 @@ package ArraysPackage;
 
 import java.util.*;
 
-public class ArrayDuplicate {
+public class DuplicateElements {
     public static void main(String[] args) {
         //getDuplicate1(new String[] {"7","2","2","4","5"});
         //getDuplicate2(new String[] {"7","2","2","4","5"});

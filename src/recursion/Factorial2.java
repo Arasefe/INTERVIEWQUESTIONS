@@ -10,7 +10,9 @@ public class Factorial2 {
 
     public static void main(String[] args) {
         //System.out.println(recursiveFactorial1(5));
-        System.out.println(recursiveFactorial2(0));
+        System.out.println(recursiveFactorial2(5));
+        System.out.println(recursiveFactorial3(5));
+
     }
 
     public static int recursiveFactorial1(int num){
@@ -27,5 +29,11 @@ public class Factorial2 {
             return 1;
         }
         return num*recursiveFactorial2(num-1);
+    }
+    public static int recursiveFactorial3(int num){
+        if(num==1){
+            return num;
+        }
+        return num*recursiveFactorial1(num-1);
     }
 }
