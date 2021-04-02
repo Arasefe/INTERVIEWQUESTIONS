@@ -7,6 +7,7 @@ public class ArrayReverse2D {
     public static void main(String[] args) {
         int[][] numbers = {{1, 2, 3, 5}, {6, 5, 4, 9}};
         twoDimensionalArray1(numbers);
+
     }
 
 
@@ -24,9 +25,5 @@ public class ArrayReverse2D {
         }
 
         System.out.println(Arrays.deepToString(numbers));
-    }
-
-    public static void twoDimensionalArray2(int[][]nums){
-
     }
 }

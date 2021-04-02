@@ -1,2 +1,2 @@
 
-This is written using BufferedWriter
+While integration testing has been part of the test automation pyramid for as long as the model has existed, it's also been the most overlooked layer in functional test automation. All tests that exceed the scope of an individual unit, and therefore can't be covered by unit testing anymore, are often executed through user interface-driven, end-to-end test scenarios.

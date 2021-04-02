@@ -25,7 +25,7 @@ public class CocoBongo {
         String result = "";
 
         for (int i = 1; i <= n; i++) {
-            if (i%3!=0 && isDigit(n)) {
+            if (i%3!=0 && !isDigit2(n)) {
                 result = "" + i;
 
             } else if (i % 5 == 0) {
@@ -38,12 +38,19 @@ public class CocoBongo {
         return result;
     }
 
-    public static boolean isDigit(int number){
+    public static boolean isDigit1(int number){
         int digit=0;
         while(number!=0){
             digit=number%10;
             number/=10;
         }
         return digit!=5;
+    }
+
+
+    public static boolean isDigit2(int number){
+        String str=Integer.toString(number);
+        Boolean result=str.contains("5")?true:false;
+        return result;
     }
 }
