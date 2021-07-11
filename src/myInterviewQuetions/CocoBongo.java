@@ -22,8 +22,9 @@ public class CocoBongo {
         if (n < 1) {
             return "Invalid";
         }
-        String result = "";
 
+
+        String result = "";
         for (int i = 1; i <= n; i++) {
             if (i%3!=0 && !isDigit2(n)) {
                 result = "" + i;
@@ -50,7 +51,8 @@ public class CocoBongo {
 
     public static boolean isDigit2(int number){
         String str=Integer.toString(number);
-        Boolean result=str.contains("5")?true:false;
-        return result;
+        return str.contains("5");
     }
+
+
 }

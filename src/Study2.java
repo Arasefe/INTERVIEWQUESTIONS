@@ -3,23 +3,23 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Study2 {
-    /*
-    Given an input string (assume it's essentially a paragraph of text) and a word to find,
-    return the number of times in the input string that the word is found.
-     */
-    public static void main(String[] args) {
-        String str="Given an input string (assume it's essentially a paragraph of text) and a word to find, return the number of times in the input string that the word is found.";
-        String word="an";
-        method(str,word);
+    public static void main(String[]args){
+        reverseSentense("Crate and Barrel Test");
     }
-    public static void method(String str, String word){
-        List<String>list=new LinkedList<>(Arrays.asList(str.split(" ")));
-        int count=0;
-        for (int i = 0; i < list.size(); i++) {
-            if(list.get(i).equals(word)){
-                count++;
-            }
+
+
+
+    public static void reverseSentense(String sent){
+        StringBuilder sb=new StringBuilder(sent);
+        sb.reverse();
+
+        char temp='a';
+        for(int i=0;i<=(sb.length()-1)/2;i++){
+            temp=sb.charAt(i);
+            //sb.charAt(i)=sb.charAt(sb.length()-1);
+            //sb.charAt(length()-1)=temp;
         }
-        System.out.println(count);
+        System.out.println(sb);
     }
+
 }

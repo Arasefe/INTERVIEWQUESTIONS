@@ -10,7 +10,8 @@ public class FrequencyExample1 {
         //method4("efelerrrr");
         //method5("efelerim");
         //method6("efellerimmm");
-        method7("efellerimmm");
+        //method7("efellerimmm");
+        method8("efellerimmm");
     }
 
     public static void method1(String str) {
@@ -122,4 +123,21 @@ public class FrequencyExample1 {
         System.out.println(map);
     }
 
+    public static void method8(String str){
+        HashMap<String, Integer>map=new LinkedHashMap<>();
+        String[]arr=str.split("");
+        for (String each : arr) {
+            if (!map.containsKey(each)) {
+                map.put(each,1);
+            }else if(map.containsKey(each)){
+                map.put(each,map.get(each)+1);
+            }
+            if(map.containsValue(1)){
+                System.out.println(map.keySet());
+            }else if(map.containsValue(2)){
+                System.out.println(map.keySet());
+                break;
+            }
+        }
+    }
 }

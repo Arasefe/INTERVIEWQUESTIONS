@@ -1,5 +1,10 @@
 package myInterviewQuetions;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+
 public class WordCount {
 
     public static void main(String[] args) {
@@ -10,7 +15,8 @@ public class WordCount {
                 "And response body should be Json format\n" +
                 "And the cut active should be false";
         String word="And";
-        wordCount(paragraph,word);
+        //wordCount(paragraph,word);
+        wordCount2(paragraph,word);
     }
 
     public static void wordCount(String paragraph, String word){
@@ -21,5 +27,23 @@ public class WordCount {
             }
         }
         System.out.println(count);
+    }
+
+    public static void wordCount2(String paragraph, String word){
+        List<String>list=new LinkedList<>(Arrays.asList(paragraph.split(" ")));
+        //System.out.println(list);
+
+
+        int count=0;
+
+        for (int i = 0; i < list.size(); i++) {
+            count= Collections.frequency(list,list.get(i));
+            String each=list.get(i)+": "+count;
+            System.out.println(each);
+        }
+
+
+
+
     }
 }
