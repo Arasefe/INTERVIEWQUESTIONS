@@ -15,7 +15,7 @@ public class CocoBongo {
     If the input is less than 1, simply return the string "Invalid"
      */
     public static void main(String[] args) {
-        System.out.println(cocoBongo(5));
+        System.out.println(cocoBongo(100));
     }
 
     public static String cocoBongo(Integer n) {
@@ -26,31 +26,26 @@ public class CocoBongo {
 
         String result = "";
         for (int i = 1; i <= n; i++) {
-            if (i%3!=0 && !isDigit2(n)) {
+            if (i%3!=0 && !isDigit(i)) {
                 result = "" + i;
 
-            } else if (i % 5 == 0) {
+            } else if (isDigit(i)){
                 result = "Bongo";
 
-            } else if (i % 3 == 0) {
+            }
+
+            else if (i % 3 == 0) {
                 result = "Coco";
+
             }
         }
         return result;
     }
 
-    public static boolean isDigit1(int number){
-        int digit=0;
-        while(number!=0){
-            digit=number%10;
-            number/=10;
-        }
-        return digit!=5;
-    }
 
+    public static boolean isDigit(int n){
+        String str=String.valueOf(n);
 
-    public static boolean isDigit2(int number){
-        String str=Integer.toString(number);
         return str.contains("5");
     }
 
