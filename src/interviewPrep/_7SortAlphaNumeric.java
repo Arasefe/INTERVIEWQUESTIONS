@@ -10,13 +10,14 @@ public class _7SortAlphaNumeric {
         append them back together
          */
 
-        sortAlphanumeric("DC|501|GCCCA|098911");
+        //sortAlphanumeric1("DC|501|GCCCA|098911");
+        sortAlphanumeric2("DC|501|GCCCA|098911");
 
 
     }
 
 
-    public static void sortAlphanumeric(String str){
+    public static void sortAlphanumeric1(String str){
         String numeric="";
         String alphabetic="";
         char[]ch=str.toCharArray();
@@ -35,5 +36,10 @@ public class _7SortAlphaNumeric {
         System.out.println(Arrays.toString(numArr));
         System.out.println(Arrays.toString(alphaArr));
 
+    }
+
+    private static void sortAlphanumeric2(String str){
+        str=str.replaceAll("\\{Alpha}","");
+        System.out.println(str);
     }
 }
