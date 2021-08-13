@@ -8,8 +8,9 @@ public class StringFrequency {
     }
 
     public static void stringFrequency1(String str) {
+        str=str.replaceAll("\\p{Punct}"," ");
         HashMap<String, Integer> map = new LinkedHashMap<>();
-        String[] arr = str.split("");
+        String[] arr = str.split(" ");
         for (String each : arr) {
             if (!map.containsKey(each)) {
                 map.put(each, 1);
