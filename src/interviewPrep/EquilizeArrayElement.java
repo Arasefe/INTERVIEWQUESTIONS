@@ -9,31 +9,6 @@ public class EquilizeArrayElement {
         System.out.println(result2);
     }
 
-    public static int equilizer(int[] nums) {
-//        if (nums.length < 2)
-//            return 0;
-//        int moves = 0;
-//        int diff = 0;
-//        int min = 0;
-//        int max = 0;
-//        int maxIX = 0;
-//        do {
-//            min = Integer.MAX_VALUE;
-//            max = Integer.MIN_VALUE;
-//            maxIX = Array.IndexOf(nums, max);
-//            maxIX = ;
-//            diff = (max - min);
-//            moves += diff;
-//            for (int i = 0; i < nums.length; i++)
-//                if (i != maxIX)
-//                    nums[i] += diff;
-//
-//        } while (min != max);
-//
-//        return moves;
-        return 0;
-    }
-
 
 
     public static int equlizer2(int[] nums) {
