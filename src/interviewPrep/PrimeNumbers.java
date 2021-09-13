@@ -4,15 +4,13 @@ public class PrimeNumbers {
 
     public static void main(String[] args) {
         // Prime numbers are positive integers which are divided just by 1 and itself
-        System.out.println(primeNumber(13));
-        System.out.println(primeNumber(1));
-        System.out.println(primeNumber(6));
-        System.out.println(primeNumber2(13));
-        System.out.println(primeNumber2(1));
-        System.out.println(primeNumber2(6));
+        System.out.println(primeNumber1(13));
+        primeNumber2(13);
+
+
     }
 
-    public static boolean primeNumber(int num) {
+    public static boolean primeNumber1(int num) {
         if (num < 1) {
             return false;
         }
@@ -24,27 +22,25 @@ public class PrimeNumbers {
         return true;
     }
 
-    private static boolean primeNumber2(int num) {
-        // L
-        int counter = 0;
-        if (num > 0) {
-            if (num == 1) {
-                return true;
+    private static void primeNumber2(int number) {
+        int count = 0;
+        if (number > 0) {
+            if (number == 1) {
+                System.out.println(number + " is prime number");
             } else {
-                for (int i = 2; i < num; i++) {
-                    if (num % i == 0) {
-                        counter++;
+                for (int i = 2; i < number; i++) {
+                    if (number % i == 0) {
+                        count++;
                     }
                 }
-                if (counter == 0) {
-                    return true;
+                if (count == 0) {
+                    System.out.println(number + " is prime");
                 } else {
-                    return false;
+                    System.out.println(number + " is not prime");
                 }
             }
-
         } else {
-            return false;
+            System.out.println("Enter a positive integer");
         }
 
     }

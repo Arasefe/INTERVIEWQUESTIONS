@@ -4,25 +4,25 @@ public class Fibonacci {
 //  1 1 2 3 5 8 13 21
 // Write a return method that returns the  Fibonacci of any given number index
     public static void main(String[] args) {
-        System.out.println(fibonacci(3));
+        System.out.println(fibonacci1(3));
 
     }
 
-    public static int fibonacci(int num) {
+    public static int fibonacci1(int num) {
 
-        int result = 0;
-        int a = 0;
-        int b = 1;
+        int lastFib = 0;
+        int firstFib = 0;
+        int secondFib = 1;
 
         for (int i = 0; i < num; i++) {
         // 0 1 1 2 3 5 8 13 21 34
-            result = a + b;         // 1    2   3   5
-            a = b;                  // a=1  1   2   3
-            b = result;             // b=1  2   3   5
+            lastFib = firstFib + secondFib;         // 1    2   3   5
+            firstFib = secondFib;                   // a=1  1   2   3
+            secondFib = lastFib;                    // b=1  2   3   5
 
         }
 
-        return result;
+        return lastFib;
     }
 
 

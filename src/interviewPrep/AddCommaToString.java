@@ -6,7 +6,7 @@ import java.util.List;
 
 public class AddCommaToString {
     public static void main(String[] args) {
-        addComma("Too many cook spoil the broth");
+        addComma("Too many cooks spoil the broth");
     }
     private static void addComma(String str){
         String myStr=str.replaceAll(" ","");
