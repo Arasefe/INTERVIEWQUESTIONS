@@ -6,12 +6,12 @@ import java.util.List;
 
 public class IteratorExample2 {
     public static void main(String[] args) {
-        methodIterateAndRemove1();
-        methodIterateAndRemove1();
-        methodIterateAndRemove1();
+        //iterateAndRemove1();
+        iterateAndRemove2();
+
     }
 
-    public static void methodIterateAndRemove1() {
+    public static void iterateAndRemove1() {
         List<String> lst = new ArrayList<>();
         lst.addAll(Arrays.asList("Aras", "Tulpar", "Efe", "Ege", "Banu", "Ismail"));
         /*
@@ -38,7 +38,7 @@ public class IteratorExample2 {
 
     }
 
-    public static void methodIterateAndRemove2(){
+    public static void iterateAndRemove2(){
         List<String> lst = new ArrayList<>();
         lst.addAll(Arrays.asList("Aras","Tulpar","Efe","Ege","Banu","Ismail"));
 

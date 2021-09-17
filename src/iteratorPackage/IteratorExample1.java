@@ -6,14 +6,13 @@ import java.util.Iterator;
 
 public  class IteratorExample1 {
     public static void main(String[] args) {
-        //methodIterateAndRemove1();
-        //methodIterateAndRemove2();
-        //methodIterateAndRemove3();
-        //methodIterateAndRemove4();
-        methodIterateAndRemove5();
+        iterateAndRemove1();
+        iterateAndRemove2();
+        iterateAndRemove3();
+        iterateAndRemove4();
     }
 
-    public static void methodIterateAndRemove1() {
+    public static void iterateAndRemove1() {
         ArrayList<Integer> lst = new ArrayList<>();
         lst.addAll(Arrays.asList(1, 2, 4, 5, 7, 8, 9));
         /*
@@ -38,13 +37,13 @@ public  class IteratorExample1 {
 
     }
 
-    public static void methodIterateAndRemove2() {
+    public static void iterateAndRemove2() {
 
         ArrayList<Integer> lst = new ArrayList<>();
         lst.addAll(Arrays.asList(121, 322, 34, 55, 79, 85, 91));
+
         Iterator<Integer> itr = lst.iterator();
         while (itr.hasNext()) {
-
             Integer i = itr.next();
             if (i == 34) {
                 itr.remove();
@@ -52,17 +51,26 @@ public  class IteratorExample1 {
         }
         System.out.println(lst);
 
+        System.out.println("--------------------------------------");
+        for (int i = 0; i <lst.size() ; i++) {
+            if(lst.get(i)==34){
+                lst.remove(lst.get(i));
+            }
+        }
+        System.out.println(lst);
+
+
     }
 
-    public static void methodIterateAndRemove3() {
+    public static void iterateAndRemove3() {
 
         ArrayList<String> lst = new ArrayList<>();
-        lst.addAll(Arrays.asList("Aras", "Tulpar", "Efe", "Ege", "Banu", "Ismail", "Ask"));
+        lst.addAll(Arrays.asList("Aras", "Tulpar", "Efe", "Ege", "Banu", "Ismail", "Aaron"));
         Iterator<String> itr = lst.iterator();
-        while (itr.hasNext()) {
 
+        while (itr.hasNext()) {
             String i = itr.next();
-            if (i.contains("ul")) {
+            if (i.contains("Aa")) {
                 itr.remove();
             }
         }
@@ -71,33 +79,18 @@ public  class IteratorExample1 {
     }
 
 
-    public static void methodIterateAndRemove4() {
+    public static void iterateAndRemove4() {
 
         ArrayList<String> lst = new ArrayList<>();
-        lst.addAll(Arrays.asList("Aras", "Tulpar", "Efe", "Ege", "Banu", "Ismail", "Ask"));
+            lst.addAll(Arrays.asList("Aras", "Tulpar", "Efe", "Ege", "Banu", "Ismail", "Aaron"));
 
         for (int i = 0; i < lst.size(); i++) {
-            if(lst.get(i).contains("ul")){
+            if(lst.get(i).contains("Aa")){
                 lst.remove(lst.get(i));
             }
         }
         System.out.println(lst);
 
     }
-
-    public static void methodIterateAndRemove5() {
-
-        ArrayList<String> lst = new ArrayList<>();
-        lst.addAll(Arrays.asList("Aras", "Tulpar", "Efe", "Ege", "Banu", "Ismail", "Ask"));
-
-        for (String name: lst) {
-            if(name.contains("ul")){
-                lst.remove(name);
-            }
-        }
-        System.out.println(lst);
-
-    }
-
 
 }

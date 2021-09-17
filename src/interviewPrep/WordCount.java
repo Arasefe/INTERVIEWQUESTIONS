@@ -8,11 +8,11 @@ import java.util.List;
 public class WordCount {
 
     public static void main(String[] args) {
-        String paragraph= "And response body should be Json format And the cut active should be false";
-        String word="And";
+        String paragraph= "Response body should be Json format and the response code should be 200";
+        String word="be";
 
-        int i=wordCount2(paragraph,word);
-        System.out.println(i);
+        wordCount2(paragraph,word);
+
     }
 
     public static void wordCount(String paragraph, String word){
@@ -25,14 +25,22 @@ public class WordCount {
         System.out.println(count);
     }
 
-    public static int wordCount2(String input, String whichWord){
-        String str= input.replaceAll("\\p{Punct}"," ");
-        List<String>list= new LinkedList<>(Arrays.asList(str.split(" ")));
-        System.out.println(list);
-        System.out.println(whichWord);
-        int   count= Collections.frequency(list,whichWord.toLowerCase());
-        count= Collections.frequency(list,whichWord);
+    public static void wordCount2(String input, String word){
+        List<String>list= new LinkedList<>(Arrays.asList(input.split(" ")));
 
-        return count;
+        int   count= Collections.frequency(list,word.toLowerCase());
+        System.out.println(count);
+
+    }
+
+    public static void wordFrequency1(String str, String word){
+        str=str.replaceAll("\\p{Punct}","");
+        int count=0;
+        for (int i = 0; i <= str.length()-4; i++) {
+            if(str.substring(i,word.length()).equalsIgnoreCase(word)){
+                count++;
+            }
+        }
+        System.out.println(count);
     }
 }

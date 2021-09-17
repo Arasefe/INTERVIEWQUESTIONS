@@ -9,39 +9,55 @@ public class ArmstrongNumber {
 
     public static void main(String[] args) {
         System.out.println("armstrong(153) = " + armstrong1(153));
-        System.out.println("armstrong(407) = " + armstrong2(407));
+        System.out.println("armstrong(153) = " + armstrong2(153));
+        System.out.println("armstrong(153) = " + armstrong3(153));
+        System.out.println("armstrong(371) = " + armstrong1(371));
+        System.out.println("armstrong(371) = " + armstrong2(371));
+        System.out.println("armstrong(371) = " + armstrong3(371));
+
+
     }
 
     public static boolean armstrong1(int num) {
-
+        int comp = num;
         int digit = 0;
         int sumOfCubes = 0;
 
         while (num > 0) {                       // 1    5   3
-            digit = num % 10;                   // 3    125 27=153
+            digit = num % 10;                   // 1    125 27=153
             num /= 10;
-            sumOfCubes +=  (digit * digit * digit);
+            sumOfCubes += (digit * digit * digit);
         }
 
-        if (num == sumOfCubes) {
-            return true;
-        }
+        return comp == sumOfCubes;
 
-        return false;
     }
 
-    public static boolean armstrong2(int num){
-        int digit=0;
-        int sum=0;
+    public static boolean armstrong2(int num) {
+        int comp = num;
+        int digit = 0;
+        int sum = 0;
 
-        while(num>0){                           // 4    0   7
-            digit=num%10;                       // 64   0   343
-            num=num/10;
-            sum+=(digit*digit*digit);
+        while (num > 0) {                           // 4    0   7
+            digit = num % 10;                       // 64   0   343
+            sum += (digit * digit * digit);
+            num = num / 10;
+
         }
-        if(num==sum){
+        if (comp == sum) {
             return true;
+        } else return false;
+    }
+
+    public static boolean armstrong3(int num) {
+        int digit = 0;
+        int sum = 0;
+        String strNum = String.valueOf(num);
+        System.out.println(strNum);
+        for (int i = 0; i < strNum.length(); i++) {                      // 4    0   7
+            digit = Integer.parseInt("" + strNum.charAt(i));          // 64   0   343
+            sum += (digit * digit * digit);
         }
-        else return false;
+        return sum==num;
     }
 }
