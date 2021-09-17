@@ -1,17 +1,10 @@
 package interviewPrep;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.*;
 
 public class FindTheUnique {
     public static void main(String[] args) {
-        //findTheUnique1("AAABBBCCCDEF");
-        //String str=findTheUnique2("JDASDAKSDAHAD");
-        //findTheUnique1("dkdanaksdaksd");
         findTheUnique4("asasaasce");
-
-
 
     }
     public static void findTheUnique1(String str){
@@ -68,6 +61,41 @@ public class FindTheUnique {
             }
         }
         System.out.println(unique);
+    }
+
+    public static void findTheUnique5(String str) {
+        Map<Character, Integer> unique = new HashMap<>();
+
+        for (int j = 0; j < str.length(); j++) {
+            int count = 0;
+            for (int i = 0; i < str.length(); i++) {
+                if (str.charAt(i) == str.charAt(j))
+                    count++;
+            }
+            if (count == 1) {
+                unique.put(str.charAt(j), count);
+            }
+        }
+
+        System.out.println(unique);
+
+    }
+
+    public static void findTheUnique6(String str){
+        //Map -- Unique character from String
+        Character[]characters=new Character[str.length()];
+        for (int i = 0; i < str.length(); i++) {
+            characters[i]=str.charAt(i);
+        }
+        ArrayList<Character>list=new ArrayList<Character>(Arrays.asList(characters));
+        Map<Character, Integer> unique = new LinkedHashMap<>();
+
+        for (int i = 0; i < list.size(); i++) {
+            int count=Collections.frequency(list,list.get(i));
+            if(count==1) unique.put(list.get(i),count);
+        }
+        System.out.println(unique);
+
     }
 
 }
