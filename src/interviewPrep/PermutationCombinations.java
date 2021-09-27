@@ -14,8 +14,9 @@ public class PermutationCombinations {
         String[]arr=new String[ch.length*2];
         int idx=0;
         for (int i = 0; i < ch.length; i++) {
-            for (int j = i+1; j < ch.length; j++) {
-                arr[idx]=""+ch[i]+ch[j];
+            for (int j = i; j < ch.length; j++) {
+                arr[idx]=ch[i]+""+ch[j];
+                idx++;
             }
         }
         System.out.println(Arrays.toString(arr));

@@ -4,14 +4,14 @@ public class PrimeNumbers {
 
     public static void main(String[] args) {
         // Prime numbers are positive integers which are divided just by 1 and itself
-        System.out.println(primeNumber1(13));
-        primeNumber2(13);
+        findAllPrimeNumbers2(10);
+
 
 
     }
 
-    public static boolean primeNumber1(int num) {
-        if (num < 1) {
+    public static boolean isPrime(int num) {
+        if (num <= 1) {
             return false;
         }
         for (int i = 2; i < num; i++) {
@@ -22,26 +22,32 @@ public class PrimeNumbers {
         return true;
     }
 
-    private static void primeNumber2(int number) {
-        int count = 0;
-        if (number > 0) {
-            if (number == 1) {
-                System.out.println(number + " is prime number");
-            } else {
-                for (int i = 2; i < number; i++) {
-                    if (number % i == 0) {
-                        count++;
-                    }
-                }
-                if (count == 0) {
-                    System.out.println(number + " is prime");
-                } else {
-                    System.out.println(number + " is not prime");
-                }
-            }
-        } else {
-            System.out.println("Enter a positive integer");
+    private static void findAllPrimeNumbers1(int limit) {
+
+        if (limit < 1) {
+            System.out.println("Enter a valid positive number");
         }
 
+        for (int number = 2; number <= limit; number++) {
+            boolean isPrime = true;
+            for (int factor = 2; factor < number; factor++) {
+                if (number % factor == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if(isPrime){
+                System.out.println(number);
+            }
+        }
+    }
+
+
+    private static void findAllPrimeNumbers2(int limit){
+        for (int i = 2; i <=limit; i++) {
+            if(isPrime(i)){
+                System.out.println(i);
+            }
+        }
     }
 }

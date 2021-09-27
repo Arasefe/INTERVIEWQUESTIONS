@@ -2,15 +2,17 @@ package interviewPrep;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
-public class ArrayListSorting {
+public class ArrayListSort {
     public static void main(String[] args) {
         List<Integer> list = new ArrayList<>(Arrays.asList(1, 23, 4, 5, 6, 78, 9, 53, 56, 78));
-        sortingArrayListAsc2(list);
+        sortAsc(list);
     }
 
-    public static void sortingArrayListAsc(List<Integer> list) {
+    public static void sortAsc(List<Integer> list) {
+        System.out.println(list);
 
         for (int i = 0; i < list.size(); i++) {
             for (int j = 0; j < list.size(); j++) {
@@ -21,13 +23,16 @@ public class ArrayListSorting {
                 }
             }
         }
+        System.out.println(list);
     }
 
-    public static void sortingArrayListAsc2(List<Integer> list) {
+    public static void sortAsc2(List<Integer> list) {
         list.stream().sorted().forEach(System.out::print);
     }
 
-    public static void SortingArrayListDesc(List<Integer> list) {
+
+    public static void sortDesc(List<Integer> list) {
+        System.out.println(list);
         for (int i = 0; i < list.size(); i++) {
             for (int j = 0; j < list.size(); j++) {
                 if (list.get(i) > list.get(j)) {
@@ -37,5 +42,6 @@ public class ArrayListSorting {
                 }
             }
         }
+        System.out.println(list);
     }
 }

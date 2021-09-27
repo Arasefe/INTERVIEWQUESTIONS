@@ -19,10 +19,10 @@ public class NonOccurredSmallest {
     public static void main(String[] args) {
         //int result = nonOccurredSmallestElement1(new int[]{-3,-1});
         //System.out.println(result);
-        nonOccurredSmallestElement2(new int[]{1,3,5,4});
+        nonOccurredSmallest2(new int[]{1,3,5,4});
     }
 
-    public static int nonOccurredSmallestElement1(int[] A) {
+    public static int nonOccurredSmallest1(int[] A) {
         // Returns positive integer not occurring in an array of integers
         Set<Integer> set = new HashSet<>();
         for (int each : A) {
@@ -42,7 +42,7 @@ public class NonOccurredSmallest {
     }
 
 
-    public static void nonOccurredSmallestElement2(int []arr){
+    public static void nonOccurredSmallest2(int []arr){
         Set<Integer>uniques=new TreeSet<>();
         for (int each : arr) {
             if(each>0){
@@ -58,7 +58,7 @@ public class NonOccurredSmallest {
         System.out.println(result);
     }
 
-    public static void nonOccurredSmallestElement3(int []arr){
+    public static void nonOccurredSmallest3(int []arr){
         Set<Integer> uniques=new LinkedHashSet<>();
         for (int each : arr) {
             if(each>0){

@@ -2,7 +2,7 @@ package interviewPrep;
 
 import java.util.Arrays;
 
-public class ReverseString_Sentence {
+public class ReverseSentence {
     public static void main(String[] args) {
         //reverse1("The more you study the better you will be!");
         //reverse2("The more you study the better you will be!");

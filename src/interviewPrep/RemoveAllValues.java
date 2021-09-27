@@ -14,25 +14,36 @@ public class RemoveAllValues {
         removeAllValues1();
     }
 
-    public static void removeAllValues1(){
-        ArrayList<Integer> list1 = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9,101,200,300));
-        list1.removeIf(f->f>100);
-        System.out.println(list1);
+    public static void removeAllValues1() {
+        removeGreaterThan100();
+        removeAllValues();
     }
+    public static void removeGreaterThan100() {
+        List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 101, 200, 300));
 
-    public static void removeAllValues(){
-        List<Integer> list = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9,101,200,300));
 
-        Iterator<Integer> it = list.iterator();
-
-        while(it.hasNext())
-
-            if(it.next()>100)
-
-                it.remove();
+        Iterator<Integer> itr = list.iterator();
+        while (itr.hasNext()) {
+            Integer i = itr.next();
+            if (i > 100) {
+                itr.remove();
+            }
+        }
 
         System.out.println(list);
     }
 
 
+    public static void removeAllValues() {
+        List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 101, 200, 300));
+
+
+        Iterator<Integer> itr = list.iterator();
+        while (itr.hasNext()) {
+            Integer i = itr.next();
+            itr.remove();
+        }
+
+        System.out.println(list);
+    }
 }
