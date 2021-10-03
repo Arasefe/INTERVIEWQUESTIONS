@@ -7,7 +7,7 @@ public class ArrayReverse1 {
     public static void main(String[] args) {
 
         int[] array = {1, 5, 3, 7, 11, 9, 15};
-        //reverse1(array);
+        reverse1(array);
         reverse2(array);
         reverse3(array);
         reverse4(array);
@@ -25,8 +25,12 @@ public class ArrayReverse1 {
         }
     }
 
+    /**
+     * This is the method to reverse the array elements
+     * @param array This is the parameter passed from the main method
+     */
     public static void reverse2(int[] array) {
-        int temp = 0;
+        int temp;
         int maxInd = array.length - 1;
 
         for (int i = 0; i < array.length; i++) {
@@ -43,7 +47,7 @@ public class ArrayReverse1 {
         the method will return reversed value of the array.
         (do it without using reverse method)
          */
-        int reverse[] = new int[nums.length];
+        int [] reverse = new int[nums.length];
         for (int i = 0, k = nums.length - 1; i < nums.length; i++, k--) {
             reverse[i] = nums[k];
             System.out.println(reverse[i]);

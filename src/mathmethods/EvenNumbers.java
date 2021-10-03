@@ -20,6 +20,8 @@ public class EvenNumbers {
                 System.out.println(i);
             }
         }
+
+        System.out.println(Math.random());
     }
 }
 
