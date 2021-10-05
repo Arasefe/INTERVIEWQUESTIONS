@@ -40,7 +40,7 @@ public class RegularExpressions {
     }
 
     private static void sortAlphanumeric2(String str) {
-        // To replace each punctuations
+        // To replace each punctuation
         str = str.replaceAll("\\p{Punct}", "");
 
         // To find only numbers
@@ -48,7 +48,7 @@ public class RegularExpressions {
         String numbers = str.replaceAll("\\p{Alpha}", "");
         System.out.println(numbers);
 
-        // To find only letter
+        // To find only letters
         String letters = str.replaceAll("\\p{Digit}", "");
         System.out.println(letters);
     }
