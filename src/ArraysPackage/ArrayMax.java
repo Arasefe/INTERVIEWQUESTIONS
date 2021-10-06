@@ -1,6 +1,6 @@
 package ArraysPackage;
 
-public class ArrayLargest1 {
+public class ArrayMax {
 
     public static void main(String[] args) {
 

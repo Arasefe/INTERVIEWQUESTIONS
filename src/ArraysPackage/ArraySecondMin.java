@@ -1,7 +1,7 @@
 package ArraysPackage;
 
 
-public class ArraySecondSmallest {
+public class ArraySecondMin {
     public static void main(String[] args) {
         //secondSmallest1(new int[]{1,2,3,4,5,6});
         //secondSmallest2(new int[]{1,2,3,4,5,6});

@@ -1,6 +1,6 @@
 package ArraysPackage;
 
-public class ArraySmallest1 {
+public class ArrayMin {
     public static void main(String[] args) {
         smallestMethod(new int[]{5, 7, 9, 11, 56, 78});
     }

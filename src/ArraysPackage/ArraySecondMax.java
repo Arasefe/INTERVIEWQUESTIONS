@@ -2,13 +2,14 @@ package ArraysPackage;
 
 
 
-public class ArraySecondHighest {
+public class ArraySecondMax {
 
     public static void main(String[] args) {
         //secondHighest1(new int[]{1,2,3,4,5,6});
         //secondHighest2(new int[]{1,2,3,4,5,6});
         //secondHighest3(new int[]{1,2,3,4,5,6});
-        secondHighest4(new int[]{1,2,3,4,5,6});
+        //secondHighest4(new int[]{1,2,3,4,5,6});
+        secondHighest5(new int[]{1,2,3,4,5,6});
 
     }
 
@@ -68,6 +69,20 @@ public class ArraySecondHighest {
                 highest=array[i];
             }else if(array[i]>secondHighest){
                 secondHighest=array[i];
+            }
+        }
+        System.out.println(secondHighest);
+    }
+
+    public static void secondHighest5(int[]array){
+        int highest=Integer.MIN_VALUE;
+        int secondHighest=Integer.MIN_VALUE;
+        for (int each :array) {
+            if(each>highest){
+                secondHighest=highest;
+                highest=each;
+            }else if(each>secondHighest){
+                secondHighest=each;
             }
         }
         System.out.println(secondHighest);

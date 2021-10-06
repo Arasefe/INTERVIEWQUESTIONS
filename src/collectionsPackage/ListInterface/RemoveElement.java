@@ -2,15 +2,15 @@ package collectionsPackage.ListInterface;
 
 import java.util.*;
 
-public class RemoveSpecificElement {
+public class RemoveElement {
     /*
     Given a list of people' names: "Ahmed", "John", Eric", "Ahmed".....
 Write a java operation to remove all the names named Ahmed
      */
     public static void main(String[] args) {
+        removeAhmed1();
         //removeAhmed1();
-        //removeAhmed1();
-        removeAhmed3();
+        //removeAhmed3();
     }
 
     public static void removeAhmed1(){

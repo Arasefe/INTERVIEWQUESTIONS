@@ -4,7 +4,7 @@ package collectionsPackage.ListInterface;
 
 import java.util.*;
 
-public class ListInterface1 {
+public class ListPractice1 {
     public static void main(String[] args) {
 //        listMethod1();
 //        listMethod2();
