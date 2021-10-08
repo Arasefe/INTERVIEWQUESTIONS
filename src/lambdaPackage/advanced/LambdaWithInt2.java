@@ -34,7 +34,7 @@ public class LambdaWithInt2 {
     public static void printSquare1(List<Integer>list){
         list.stream().filter(p->p%2!=0).map(p->p*p).forEach(p-> System.out.println(p));
     }
-    // 2st Way: By using method Reference
+    // 2nd Way: By using method Reference
     public static void printSquare2(List<Integer>list){
         list.stream().filter(LambdaWithInt2::getOdd).map(LambdaWithInt2::getSquare).forEach(LambdaWithInt1::getPrint);
     }
