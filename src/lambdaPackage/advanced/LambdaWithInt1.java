@@ -1,22 +1,24 @@
 package lambdaPackage.advanced;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class LambdaWithInt1 {
     public LambdaWithInt1(){}
 
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList();
-        list.add(12);
-        list.add(9);
-        list.add(13);
-        list.add(4);
-        list.add(9);
-        list.add(2);
-        list.add(4);
-        list.add(12);
-        list.add(15);
+        // Arrays.asList(); Converts Array to ArrayList
+        List<Integer> list = new ArrayList(Arrays.asList(12,9,13,4,9,2,4,12,15));
+//        list.add(12);
+//        list.add(9);
+//        list.add(13);
+//        list.add(4);
+//        list.add(9);
+//        list.add(2);
+//        list.add(4);
+//        list.add(12);
+//        list.add(15);
 
 //        getEvenNumbers1(list);
 //        getEvenNumbers2(list);

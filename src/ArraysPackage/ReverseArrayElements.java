@@ -2,7 +2,7 @@ package ArraysPackage;
 
 import java.util.Arrays;
 
-public class ArrayReverse1 {
+public class ReverseArrayElements {
 
     public static void main(String[] args) {
 

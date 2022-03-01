@@ -8,17 +8,17 @@ public class ArmstrongNumber {
 	*/
 
     public static void main(String[] args) {
-        System.out.println("armstrong(153) = " + armstrong1(153));
-        System.out.println("armstrong(153) = " + armstrong2(153));
-        System.out.println("armstrong(153) = " + armstrong3(153));
-        System.out.println("armstrong(371) = " + armstrong1(371));
-        System.out.println("armstrong(371) = " + armstrong2(371));
-        System.out.println("armstrong(371) = " + armstrong3(371));
+        System.out.println("armstrong(153) = " + isArmstrong1(153));
+        System.out.println("armstrong(153) = " + isArmstrong2(153));
+        System.out.println("armstrong(153) = " + isArmstrong3(153));
+        System.out.println("armstrong(371) = " + isArmstrong1(371));
+        System.out.println("armstrong(371) = " + isArmstrong2(371));
+        System.out.println("armstrong(371) = " + isArmstrong3(371));
 
 
     }
 
-    public static boolean armstrong1(int num) {
+    public static boolean isArmstrong1(int num) {
         int comp = num;
         int digit = 0;
         int sumOfCubes = 0;
@@ -33,7 +33,7 @@ public class ArmstrongNumber {
 
     }
 
-    public static boolean armstrong2(int num) {
+    public static boolean isArmstrong2(int num) {
         int comp = num;
         int digit = 0;
         int sum = 0;
@@ -49,7 +49,7 @@ public class ArmstrongNumber {
         } else return false;
     }
 
-    public static boolean armstrong3(int num) {
+    public static boolean isArmstrong3(int num) {
         int digit = 0;
         int sum = 0;
         String strNum = String.valueOf(num);

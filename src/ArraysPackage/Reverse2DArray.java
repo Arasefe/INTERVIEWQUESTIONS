@@ -2,7 +2,7 @@ package ArraysPackage;
 
 import java.util.Arrays;
 
-public class ArrayReverse2D {
+public class Reverse2DArray {
 
     public static void main(String[] args) {
         int[][] numbers = {{1, 2, 3, 5}, {6, 5, 4, 9}};
