@@ -4,59 +4,51 @@ public class ArrayMax {
 
     public static void main(String[] args) {
 
-        //arrayLargest1(new int[]{2,3,6,8,5});
-        arrayLargest2(new int[]{2,3,6,8,5});
-        arrayLargest3(new int[]{2,3,6,8,5});
-        arrayLargest4(new int[]{2,3,6,8,5});
+
+//        findMax1(new int[]{2,3,6,8,5,-13,26,-123});
+//        findMax2(new int[]{2,3,6,8,5,-13,26,-123});
+        findMax3(new int[]{2,3,6,8,5,-13,26,-123});
 
     }
 
-    public static void arrayLargest1(int[]nums){
+    public static void findMax1(int[]nums){
         /*
         Create a method it will take one parameter as an int array and
-        the method will return largest value from the array.
-        (Use largest value without using sort method)
+        the method will return max value from the array.
+        (Use max value without using sort method)
          */
-        int largest=nums[0];
+        int max=nums[0];
 
         for(int i=1;i<nums.length;i++){
-          if(nums[i]>largest){
-              largest=nums[i];
+          if(nums[i]>max){
+              max=nums[i];
           }
         }
-        System.out.println(largest);
+        System.out.println(max);
 
     }
 
-    public static int arrayLargest2(int[]arr){
-        int largest=Integer.MIN_VALUE;
+    public static void findMax2(int[]arr){
+        int max=Integer.MIN_VALUE;
         for (int i = 0; i < arr.length; i++) {
-            if(arr[i]>largest){
-                largest=arr[i];
+            if(arr[i]>max){
+                max=arr[i];
             }
         }
-        return largest;
     }
 
-    public static void arrayLargest3(int[]arr){
-        int largest=arr[0];
-        //2,3,6,8,5
-        for (int i = 0; i < arr.length; i++) {
-            if(arr[i]>largest){
-                largest=arr[i];
-            }
-        }
-        System.out.println(largest);
-    }
-
-
-    public static void arrayLargest4(int ...num){
-            int largest=num[0];
-            for(int i=1;i<num.length;i++){
-                if(num[i]>largest){
-                    largest=num[i];
+    public static void findMax3(int ...num){
+            int temp=0;
+            for(int i=0;i<num.length;i++){
+                for (int j = i+1; j <num.length ; j++) {
+                    if(num[i]>num[j]){
+                        temp=num[i];
+                        num[i]=num[j];
+                        num[j]=temp;
+                    }
                 }
+
             }
-            System.out.println(largest);
+            System.out.println(num[num.length-1]);
         }
     }

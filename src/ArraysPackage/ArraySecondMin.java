@@ -3,62 +3,59 @@ package ArraysPackage;
 
 public class ArraySecondMin {
     public static void main(String[] args) {
-        //secondSmallest1(new int[]{1,2,3,4,5,6});
-        //secondSmallest2(new int[]{1,2,3,4,5,6});
-        //secondSmallest3(new int[]{1, 2, 3, 4, 5, 6});
-        secondSmallest4(new int[]{1, 2, 3, 4, 5, 6});
-        //secondSmallest5(new int[]{1, 2, 3, 4, 5, 6});
+
+        secondMin(new int[]{1, 2, 3, 4, 5, 6});
     }
 
-    public static void secondSmallest1(int[] arr) {
-        int smallest = Integer.MAX_VALUE;
-        int secondSmallest = Integer.MAX_VALUE;
+    public static void secondMin(int[] arr) {       // 1, 2, 3, 4, 5, 6
+        int min = Integer.MAX_VALUE;
+        int secMin = Integer.MAX_VALUE;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < smallest) {
-                secondSmallest = smallest;
-                smallest = arr[i];
-            } else if (arr[i] < secondSmallest) {
-                secondSmallest = arr[i];
+            if (arr[i] < min) {
+                secMin = min;                       // Integer.MAX_VALUE
+                min = arr[i];                       // 1
+            } else if (arr[i] < secMin) {
+                secMin = arr[i];                    // 2
             }
         }
-        System.out.println(secondSmallest);
+        System.out.println(secMin);
     }
 
-    public static void secondSmallest2(int[] arr) {
-        int smallest = Integer.MAX_VALUE;
-        int secondSmallest = Integer.MAX_VALUE;
+    public static void secondMin1(int[] arr) {
+        int min = Integer.MAX_VALUE;
+        int secondMin = Integer.MAX_VALUE;
         for (int each : arr) {
-            if (each < smallest) {
-                secondSmallest = smallest;
-                smallest = each;
-            } else if (each < secondSmallest) {
-                secondSmallest = each;
+            if (each < min) {
+                secondMin = min;
+                min = each;
+            } else if (each < secondMin) {
+                secondMin = each;
             }
         }
-        System.out.println(secondSmallest);
+        System.out.println(secondMin);
     }
 
 
-    public static void secondSmallest3(int[] elements) {
-        int smallest = Integer.MAX_VALUE;
-        int secondSmallest = Integer.MAX_VALUE;
+    public static void secondMin2(int[] elements) {
+        int min = Integer.MAX_VALUE;
+        int secondMin = Integer.MAX_VALUE;
 
         for (int i = 0; i < elements.length; i++) {
-            if (elements[i] < smallest)
-                smallest = elements[i];
+            if (elements[i] < min)
+                min = elements[i];
         }
 
         for (int i = 0; i < elements.length; i++) {
-            if (elements[i] < secondSmallest && elements[i] > smallest)
-                secondSmallest = elements[i];
+            if (elements[i] < secondMin && elements[i] > min)
+                secondMin = elements[i];
 
         }
 
-        System.out.println("The smallest element is: " + smallest + "\n" + "The second smallest element is: " + secondSmallest);
+        System.out.println("The smallest element is: " + min +  " and the second smallest element is: " + secondMin);
     }
 
 
-    public static void secondSmallest4(int []arr){
+    public static void secondMin3(int []arr){
         int smallest=Integer.MAX_VALUE;
         int secondSmallest=Integer.MAX_VALUE;
 
@@ -78,7 +75,7 @@ public class ArraySecondMin {
     }
 
 
-    public static void secondSmallest5(int[]numbers){
+    public static void secondMin4(int[]numbers){
         int smallest=Integer.MAX_VALUE;
         int secondSmallest=Integer.MAX_VALUE;
 
